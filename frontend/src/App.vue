@@ -87,3 +87,72 @@ async function handleSubmit() {
   }
 }
 </script>
+
+<style scoped>
+  .convert-page {
+    max-width: 400px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 2rem 1.5rem;
+  }
+
+  .convert-page h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  input[type="file"] {
+    border: none;
+  }
+
+  input, select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+
+  button[type="submit"] {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  button[disabled] {
+    background: #aaa;
+    cursor: not-allowed;
+  }
+
+  .progress {
+    margin-top: 1rem;
+    color: #3498db;
+    text-align: center;
+  }
+
+  .error {
+    margin-top: 1rem;
+    color: #e74c3c;
+    text-align: center;
+  }
+
+  .result a {
+    color: #27ae60;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+</style>

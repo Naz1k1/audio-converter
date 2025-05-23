@@ -1,0 +1,10 @@
+server:
+  port: 8081
+
+spring:
+  servlet:
+    multipart:
+      # 设置单个最大文件为500MB
+      max-file-size: 500MB
+      # 设置总请求大小最大为501MB
+      max-request-size: 501MB

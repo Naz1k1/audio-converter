@@ -1,0 +1,1612 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f00b05d1980, pid=65507, tid=0x00007f00b89e86c0
+#
+# JRE version: OpenJDK Runtime Environment (Zulu 8.86.0.25-CA-linux64) (8.0_452-b09) (build 1.8.0_452-b09)
+# Java VM: OpenJDK 64-Bit Server VM (25.452-b09 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libavformat.so.59+0x1d1980]  av_write_frame+0x140
+#
+# Core dump written. Default location: /home/nazk1/Code/Java/audio-converter/backend/core or core.65507
+#
+# If you would like to submit a bug report, please visit:
+#   http://www.azul.com/support/
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f00d524b800):  JavaThread "http-nio-8081-exec-1" daemon [_thread_in_native, id=65568, stack(0x00007f00b88e9000,0x00007f00b89e9000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000010
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00007f00b2851370, RCX=0x0000000000000000, RDX=0x0000000000000062
+RSP=0x00007f00b89e5360, RBP=0x00007f00b89e53e8, RSI=0x0000000000000000, RDI=0x0000000000000000
+R8 =0x00007f00b2851370, R9 =0x0000000728180c30, R10=0x0000000000000000, R11=0x00007f00b05d1840
+R12=0x0000000000000000, R13=0x00007f00b2851368, R14=0x00007f00b89e5410, R15=0x00007f00d524b800
+RIP=0x00007f00b05d1980, EFLAGS=0x0000000000010246, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f00b89e5360)
+0x00007f00b89e5360:   0000000000000000 00007f00b89e53e8
+0x00007f00b89e5370:   0000000000000000 00007f00b2851368
+0x00007f00b89e5380:   00007f00b89e5410 00007f00c5017ee7
+0x00007f00b89e5390:   00007f00b89e53e8 00007f00c5017c47
+0x00007f00b89e53a0:   00007f00c5017c02 00007f00b89e53a8
+0x00007f00b89e53b0:   00007f00b2851368 00007f00b89e5410
+0x00007f00b89e53c0:   00007f00b2856270 0000000000000000
+0x00007f00b89e53d0:   00007f00b2851370 0000000000000000
+0x00007f00b89e53e0:   00007f00b89e5408 00007f00b89e5478
+0x00007f00b89e53f0:   00007f00c5007b40 00000007262f3b78
+0x00007f00b89e5400:   00007f00c5011b56 0000000000000000
+0x00007f00b89e5410:   0000000728180c30 0000000728180c30
+0x00007f00b89e5420:   0000000728180c30 00007f00c5013ae7
+0x00007f00b89e5430:   00000007281807d0 00007f00b89e5418
+0x00007f00b89e5440:   00007f00b93dfd0d 00007f00b89e5498
+0x00007f00b89e5450:   00007f00b28abb10 0000000000000000
+0x00007f00b89e5460:   00007f00b93dfd50 00007f00b89e5408
+0x00007f00b89e5470:   00007f00b89e5498 00007f00b89e54e0
+0x00007f00b89e5480:   00007f00c50080fd 0000000000000000
+0x00007f00b89e5490:   0000000728180c30 00000007281807d0
+0x00007f00b89e54a0:   00007f00b89e54a0 00007f00b93dfe08
+0x00007f00b89e54b0:   00007f00b89e54f8 00007f00b28abb10
+0x00007f00b89e54c0:   0000000000000000 00007f00b93dfe50
+0x00007f00b89e54d0:   00007f00b89e5498 00007f00b89e54f8
+0x00007f00b89e54e0:   00007f00b89e5540 00007f00c50080fd
+0x00007f00b89e54f0:   0000000000000000 00000007281807d0
+0x00007f00b89e5500:   00007f00b89e5500 00007f00b9d15d9d
+0x00007f00b89e5510:   00007f00b89e5568 00007f00b93c5cd0
+0x00007f00b89e5520:   0000000000000000 00007f00b9d15e40
+0x00007f00b89e5530:   00007f00b89e54f8 00007f00b89e5558
+0x00007f00b89e5540:   00007f00b89e55b0 00007f00c50080fd
+0x00007f00b89e5550:   0000000000000000 00000007281807d0 
+
+Instructions: (pc=0x00007f00b05d1980)
+0x00007f00b05d1960:   00 00 e8 c9 e4 ee ff 4c 89 f5 49 89 06 48 85 c0
+0x00007f00b05d1970:   0f 85 ee fe ff ff 41 bd f4 ff ff ff eb 9b 66 90
+0x00007f00b05d1980:   48 8b 47 10 41 bd 01 00 00 00 f6 40 2e 01 74 91
+0x00007f00b05d1990:   31 f6 ff 50 50 49 8b 7c 24 20 41 89 c5 48 85 ff 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX={method} {0x00007f00b2851370} 'av_write_frame' '(Lorg/bytedeco/ffmpeg/avformat/AVFormatContext;Lorg/bytedeco/ffmpeg/avcodec/AVPacket;)I' in 'org/bytedeco/ffmpeg/global/avformat'
+RCX=0x0000000000000000 is an unknown value
+RDX=0x0000000000000062 is an unknown value
+RSP=0x00007f00b89e5360 is pointing into the stack for thread: 0x00007f00d524b800
+RBP=0x00007f00b89e53e8 is pointing into the stack for thread: 0x00007f00d524b800
+RSI=0x0000000000000000 is an unknown value
+RDI=0x0000000000000000 is an unknown value
+R8 ={method} {0x00007f00b2851370} 'av_write_frame' '(Lorg/bytedeco/ffmpeg/avformat/AVFormatContext;Lorg/bytedeco/ffmpeg/avcodec/AVPacket;)I' in 'org/bytedeco/ffmpeg/global/avformat'
+R9 =0x0000000728180c30 is an oop
+org.bytedeco.ffmpeg.avformat.AVFormatContext 
+ - klass: 'org/bytedeco/ffmpeg/avformat/AVFormatContext'
+R10=0x0000000000000000 is an unknown value
+R11=0x00007f00b05d1840: av_write_frame+0 in /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavformat.so.59 at 0x00007f00b0400000
+R12=0x0000000000000000 is an unknown value
+R13=0x00007f00b2851368 is pointing into metadata
+R14=0x00007f00b89e5410 is pointing into the stack for thread: 0x00007f00d524b800
+R15=0x00007f00d524b800 is a thread
+
+
+Stack: [0x00007f00b88e9000,0x00007f00b89e9000],  sp=0x00007f00b89e5360,  free space=1008k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libavformat.so.59+0x1d1980]  av_write_frame+0x140
+j  org.bytedeco.javacv.FFmpegFrameRecorder.flush()V+109
+j  org.bytedeco.javacv.FFmpegFrameRecorder.stop()V+8
+j  com.naz1k1.service.ConverterService.closeResources(Lorg/bytedeco/javacv/FFmpegFrameGrabber;Lorg/bytedeco/javacv/FFmpegFrameRecorder;)V+5
+j  com.naz1k1.service.ConverterService.convertToAudio(Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;)V+131
+j  com.naz1k1.service.ConverterService.convertVideoToAudio(Lorg/springframework/web/multipart/MultipartFile;Ljava/lang/String;ILjava/lang/Integer;Ljava/lang/Integer;)[B+93
+j  com.naz1k1.controller.VideoToAudioController.convertVideoToAudio(Lorg/springframework/web/multipart/MultipartFile;Ljava/lang/String;ILjava/lang/Integer;Ljava/lang/Integer;)Lorg/springframework/http/ResponseEntity;+63
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x6adf76]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0xea6
+V  [libjvm.so+0xa02690]  Reflection::invoke(instanceKlassHandle, methodHandle, Handle, bool, objArrayHandle, BasicType, objArrayHandle, bool, Thread*)+0xb10
+V  [libjvm.so+0xa04166]  Reflection::invoke_method(oopDesc*, Handle, objArrayHandle, Thread*)+0x126
+V  [libjvm.so+0x758815]  JVM_InvokeMethod+0x115
+J 3464  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (0 bytes) @ 0x00007f00c5b9bd2d [0x00007f00c5b9bc40+0xed]
+J 3463 C1 sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (104 bytes) @ 0x00007f00c5b9d2d4 [0x00007f00c5b9c100+0x11d4]
+J 4006 C2 java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (62 bytes) @ 0x00007f00c5de7088 [0x00007f00c5de7000+0x88]
+j  org.springframework.web.method.support.InvocableHandlerMethod.doInvoke([Ljava/lang/Object;)Ljava/lang/Object;+28
+j  org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(Lorg/springframework/web/context/request/NativeWebRequest;Lorg/springframework/web/method/support/ModelAndViewContainer;[Ljava/lang/Object;)Ljava/lang/Object;+54
+j  org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(Lorg/springframework/web/context/request/ServletWebRequest;Lorg/springframework/web/method/support/ModelAndViewContainer;[Ljava/lang/Object;)V+4
+j  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Lorg/springframework/web/method/HandlerMethod;)Lorg/springframework/web/servlet/ModelAndView;+244
+j  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Lorg/springframework/web/method/HandlerMethod;)Lorg/springframework/web/servlet/ModelAndView;+81
+j  org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljava/lang/Object;)Lorg/springframework/web/servlet/ModelAndView;+7
+j  org.springframework.web.servlet.DispatcherServlet.doDispatch(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V+259
+j  org.springframework.web.servlet.DispatcherServlet.doService(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V+241
+j  org.springframework.web.servlet.FrameworkServlet.processRequest(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V+71
+j  org.springframework.web.servlet.FrameworkServlet.doPost(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V+3
+j  javax.servlet.http.HttpServlet.service(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V+150
+j  org.springframework.web.servlet.FrameworkServlet.service(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V+33
+j  javax.servlet.http.HttpServlet.service(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+37
+j  org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+304
+j  org.apache.catalina.core.ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+99
+j  org.apache.tomcat.websocket.server.WsFilter.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V+21
+j  org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+135
+j  org.apache.catalina.core.ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+99
+j  org.springframework.web.filter.RequestContextFilter.doFilterInternal(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/FilterChain;)V+21
+j  org.springframework.web.filter.OncePerRequestFilter.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V+147
+j  org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+135
+j  org.apache.catalina.core.ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+99
+j  org.springframework.web.filter.FormContentFilter.doFilterInternal(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/FilterChain;)V+38
+j  org.springframework.web.filter.OncePerRequestFilter.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V+147
+j  org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+135
+j  org.apache.catalina.core.ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+99
+j  org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/FilterChain;)V+21
+j  org.springframework.web.filter.OncePerRequestFilter.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V+147
+j  org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+135
+j  org.apache.catalina.core.ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+99
+j  org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/FilterChain;)V+53
+j  org.springframework.web.filter.OncePerRequestFilter.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V+147
+j  org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+135
+j  org.apache.catalina.core.ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+99
+j  org.apache.catalina.core.StandardWrapperValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+514
+j  org.apache.catalina.core.StandardContextValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+169
+j  org.apache.catalina.authenticator.AuthenticatorBase.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+260
+j  org.apache.catalina.core.StandardHostValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+128
+j  org.apache.catalina.valves.ErrorReportValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+6
+j  org.apache.catalina.core.StandardEngineValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+59
+j  org.apache.catalina.connector.CoyoteAdapter.service(Lorg/apache/coyote/Request;Lorg/apache/coyote/Response;)V+188
+j  org.apache.coyote.http11.Http11Processor.service(Lorg/apache/tomcat/util/net/SocketWrapperBase;)Lorg/apache/tomcat/util/net/AbstractEndpoint$Handler$SocketState;+806
+j  org.apache.coyote.AbstractProcessorLight.process(Lorg/apache/tomcat/util/net/SocketWrapperBase;Lorg/apache/tomcat/util/net/SocketEvent;)Lorg/apache/tomcat/util/net/AbstractEndpoint$Handler$SocketState;+170
+j  org.apache.coyote.AbstractProtocol$ConnectionHandler.process(Lorg/apache/tomcat/util/net/SocketWrapperBase;Lorg/apache/tomcat/util/net/SocketEvent;)Lorg/apache/tomcat/util/net/AbstractEndpoint$Handler$SocketState;+489
+j  org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun()V+249
+j  org.apache.tomcat.util.net.SocketProcessorBase.run()V+32
+j  org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(Lorg/apache/tomcat/util/threads/ThreadPoolExecutor$Worker;)V+92
+j  org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run()V+5
+j  org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run()V+4
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x6adf76]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0xea6
+V  [libjvm.so+0x6ab513]  JavaCalls::call_virtual(JavaValue*, KlassHandle, Symbol*, Symbol*, JavaCallArguments*, Thread*)+0x263
+V  [libjvm.so+0x6abb17]  JavaCalls::call_virtual(JavaValue*, Handle, KlassHandle, Symbol*, Symbol*, Thread*)+0x57
+V  [libjvm.so+0x74d54c]  thread_entry(JavaThread*, Thread*)+0x6c
+V  [libjvm.so+0xaec0a3]  JavaThread::thread_main_inner()+0x1f3
+V  [libjvm.so+0xaec43d]  JavaThread::run()+0x36d
+V  [libjvm.so+0x974a42]  java_start(Thread*)+0x102
+C  [libc.so.6+0x711d4]  start_thread+0x2e4
+C  [libc.so.6+0xf3cec]  __clone3+0x2c
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  org.bytedeco.ffmpeg.global.avformat.av_write_frame(Lorg/bytedeco/ffmpeg/avformat/AVFormatContext;Lorg/bytedeco/ffmpeg/avcodec/AVPacket;)I+0
+j  org.bytedeco.javacv.FFmpegFrameRecorder.flush()V+109
+j  org.bytedeco.javacv.FFmpegFrameRecorder.stop()V+8
+j  com.naz1k1.service.ConverterService.closeResources(Lorg/bytedeco/javacv/FFmpegFrameGrabber;Lorg/bytedeco/javacv/FFmpegFrameRecorder;)V+5
+j  com.naz1k1.service.ConverterService.convertToAudio(Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;)V+131
+j  com.naz1k1.service.ConverterService.convertVideoToAudio(Lorg/springframework/web/multipart/MultipartFile;Ljava/lang/String;ILjava/lang/Integer;Ljava/lang/Integer;)[B+93
+j  com.naz1k1.controller.VideoToAudioController.convertVideoToAudio(Lorg/springframework/web/multipart/MultipartFile;Ljava/lang/String;ILjava/lang/Integer;Ljava/lang/Integer;)Lorg/springframework/http/ResponseEntity;+63
+v  ~StubRoutines::call_stub
+J 3464  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (0 bytes) @ 0x00007f00c5b9bcb7 [0x00007f00c5b9bc40+0x77]
+J 3463 C1 sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (104 bytes) @ 0x00007f00c5b9d2d4 [0x00007f00c5b9c100+0x11d4]
+J 4006 C2 java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (62 bytes) @ 0x00007f00c5de7088 [0x00007f00c5de7000+0x88]
+j  org.springframework.web.method.support.InvocableHandlerMethod.doInvoke([Ljava/lang/Object;)Ljava/lang/Object;+28
+j  org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(Lorg/springframework/web/context/request/NativeWebRequest;Lorg/springframework/web/method/support/ModelAndViewContainer;[Ljava/lang/Object;)Ljava/lang/Object;+54
+j  org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(Lorg/springframework/web/context/request/ServletWebRequest;Lorg/springframework/web/method/support/ModelAndViewContainer;[Ljava/lang/Object;)V+4
+j  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Lorg/springframework/web/method/HandlerMethod;)Lorg/springframework/web/servlet/ModelAndView;+244
+j  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Lorg/springframework/web/method/HandlerMethod;)Lorg/springframework/web/servlet/ModelAndView;+81
+j  org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljava/lang/Object;)Lorg/springframework/web/servlet/ModelAndView;+7
+j  org.springframework.web.servlet.DispatcherServlet.doDispatch(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V+259
+j  org.springframework.web.servlet.DispatcherServlet.doService(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V+241
+j  org.springframework.web.servlet.FrameworkServlet.processRequest(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V+71
+j  org.springframework.web.servlet.FrameworkServlet.doPost(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V+3
+j  javax.servlet.http.HttpServlet.service(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V+150
+j  org.springframework.web.servlet.FrameworkServlet.service(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V+33
+j  javax.servlet.http.HttpServlet.service(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+37
+j  org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+304
+j  org.apache.catalina.core.ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+99
+j  org.apache.tomcat.websocket.server.WsFilter.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V+21
+j  org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+135
+j  org.apache.catalina.core.ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+99
+j  org.springframework.web.filter.RequestContextFilter.doFilterInternal(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/FilterChain;)V+21
+j  org.springframework.web.filter.OncePerRequestFilter.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V+147
+j  org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+135
+j  org.apache.catalina.core.ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+99
+j  org.springframework.web.filter.FormContentFilter.doFilterInternal(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/FilterChain;)V+38
+j  org.springframework.web.filter.OncePerRequestFilter.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V+147
+j  org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+135
+j  org.apache.catalina.core.ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+99
+j  org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/FilterChain;)V+21
+j  org.springframework.web.filter.OncePerRequestFilter.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V+147
+j  org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+135
+j  org.apache.catalina.core.ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+99
+j  org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/FilterChain;)V+53
+j  org.springframework.web.filter.OncePerRequestFilter.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V+147
+j  org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+135
+j  org.apache.catalina.core.ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+99
+j  org.apache.catalina.core.StandardWrapperValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+514
+j  org.apache.catalina.core.StandardContextValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+169
+j  org.apache.catalina.authenticator.AuthenticatorBase.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+260
+j  org.apache.catalina.core.StandardHostValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+128
+j  org.apache.catalina.valves.ErrorReportValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+6
+j  org.apache.catalina.core.StandardEngineValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+59
+j  org.apache.catalina.connector.CoyoteAdapter.service(Lorg/apache/coyote/Request;Lorg/apache/coyote/Response;)V+188
+j  org.apache.coyote.http11.Http11Processor.service(Lorg/apache/tomcat/util/net/SocketWrapperBase;)Lorg/apache/tomcat/util/net/AbstractEndpoint$Handler$SocketState;+806
+j  org.apache.coyote.AbstractProcessorLight.process(Lorg/apache/tomcat/util/net/SocketWrapperBase;Lorg/apache/tomcat/util/net/SocketEvent;)Lorg/apache/tomcat/util/net/AbstractEndpoint$Handler$SocketState;+170
+j  org.apache.coyote.AbstractProtocol$ConnectionHandler.process(Lorg/apache/tomcat/util/net/SocketWrapperBase;Lorg/apache/tomcat/util/net/SocketEvent;)Lorg/apache/tomcat/util/net/AbstractEndpoint$Handler$SocketState;+489
+j  org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun()V+249
+j  org.apache.tomcat.util.net.SocketProcessorBase.run()V+32
+j  org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(Lorg/apache/tomcat/util/threads/ThreadPoolExecutor$Worker;)V+92
+j  org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run()V+5
+j  org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run()V+4
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f00103f2800 JavaThread "JavaCPP Deallocator" daemon [_thread_blocked, id=65781, stack(0x00007f00b3e00000,0x00007f00b3f00000)]
+  0x00007f00d400a000 JavaThread "DestroyJavaVM" [_thread_blocked, id=65508, stack(0x00007f00d9700000,0x00007f00d9800000)]
+  0x00007f00d52a4800 JavaThread "http-nio-8081-Acceptor" daemon [_thread_in_native, id=65579, stack(0x00007f00b8a00000,0x00007f00b8b00000)]
+  0x00007f00d5287800 JavaThread "http-nio-8081-Poller" daemon [_thread_in_native, id=65578, stack(0x00007f00b8b00000,0x00007f00b8c00000)]
+  0x00007f00d5284800 JavaThread "http-nio-8081-exec-10" daemon [_thread_blocked, id=65577, stack(0x00007f00b3f00000,0x00007f00b4000000)]
+  0x00007f00d5282800 JavaThread "http-nio-8081-exec-9" daemon [_thread_blocked, id=65576, stack(0x00007f00b80e9000,0x00007f00b81e9000)]
+  0x00007f00d5280800 JavaThread "http-nio-8081-exec-8" daemon [_thread_blocked, id=65575, stack(0x00007f00b81e9000,0x00007f00b82e9000)]
+  0x00007f00d527e800 JavaThread "http-nio-8081-exec-7" daemon [_thread_blocked, id=65574, stack(0x00007f00b82e9000,0x00007f00b83e9000)]
+  0x00007f00d527c800 JavaThread "http-nio-8081-exec-6" daemon [_thread_blocked, id=65573, stack(0x00007f00b83e9000,0x00007f00b84e9000)]
+  0x00007f00d527a800 JavaThread "http-nio-8081-exec-5" daemon [_thread_blocked, id=65572, stack(0x00007f00b84e9000,0x00007f00b85e9000)]
+  0x00007f00d5279000 JavaThread "http-nio-8081-exec-4" daemon [_thread_blocked, id=65571, stack(0x00007f00b85e9000,0x00007f00b86e9000)]
+  0x00007f00d524f000 JavaThread "http-nio-8081-exec-3" daemon [_thread_blocked, id=65570, stack(0x00007f00b86e9000,0x00007f00b87e9000)]
+  0x00007f00d524d000 JavaThread "http-nio-8081-exec-2" daemon [_thread_blocked, id=65569, stack(0x00007f00b87e9000,0x00007f00b88e9000)]
+=>0x00007f00d524b800 JavaThread "http-nio-8081-exec-1" daemon [_thread_in_native, id=65568, stack(0x00007f00b88e9000,0x00007f00b89e9000)]
+  0x00007f00d507f000 JavaThread "container-0" [_thread_blocked, id=65567, stack(0x00007f00b9000000,0x00007f00b9100000)]
+  0x00007f0014022000 JavaThread "Catalina-utility-2" [_thread_blocked, id=65566, stack(0x00007f00b9100000,0x00007f00b9200000)]
+  0x00007f00d507c800 JavaThread "Catalina-utility-1" [_thread_blocked, id=65565, stack(0x00007f00b9b00000,0x00007f00b9c00000)]
+  0x00007f002000a000 JavaThread "JMX server connection timeout 19" daemon [_thread_blocked, id=65556, stack(0x00007f00ba700000,0x00007f00ba800000)]
+  0x00007f0034001800 JavaThread "RMI TCP Connection(2)-127.0.0.1" daemon [_thread_in_native, id=65555, stack(0x00007f00b9e00000,0x00007f00b9f00000)]
+  0x00007f0028007800 JavaThread "RMI Scheduler(0)" daemon [_thread_blocked, id=65554, stack(0x00007f00b9f00000,0x00007f00ba000000)]
+  0x00007f0038001800 JavaThread "RMI TCP Connection(1)-127.0.0.1" daemon [_thread_in_native, id=65552, stack(0x00007f00ba600000,0x00007f00ba700000)]
+  0x00007f00d4548800 JavaThread "RMI TCP Accept-0" daemon [_thread_in_native, id=65530, stack(0x00007f00baf61000,0x00007f00bb061000)]
+  0x00007f00d4512800 JavaThread "RMI TCP Accept-43791" daemon [_thread_in_native, id=65529, stack(0x00007f00bb087000,0x00007f00bb187000)]
+  0x00007f00d4502800 JavaThread "RMI TCP Accept-0" daemon [_thread_in_native, id=65528, stack(0x00007f00bb187000,0x00007f00bb287000)]
+  0x00007f00d40df000 JavaThread "Service Thread" daemon [_thread_blocked, id=65527, stack(0x00007f00bb7fc000,0x00007f00bb8fc000)]
+  0x00007f00d40d1800 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=65526, stack(0x00007f00bb8fd000,0x00007f00bb9fd000)]
+  0x00007f00d40cf800 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=65525, stack(0x00007f00bb9fe000,0x00007f00bbafe000)]
+  0x00007f00d40cd800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=65524, stack(0x00007f00bbaff000,0x00007f00bbbff000)]
+  0x00007f00d40ca800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=65523, stack(0x00007f00bbc00000,0x00007f00bbd00000)]
+  0x00007f00d40c6000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=65522, stack(0x00007f00bbd00000,0x00007f00bbe00000)]
+  0x00007f00d4095000 JavaThread "Finalizer" daemon [_thread_blocked, id=65521, stack(0x00007f00bbe00000,0x00007f00bbf00000)]
+  0x00007f00d4090800 JavaThread "Reference Handler" daemon [_thread_blocked, id=65520, stack(0x00007f00bbf00000,0x00007f00bc000000)]
+
+Other Threads:
+  0x00007f00d4086800 VMThread [stack: 0x00007f00c0071000,0x00007f00c0171000] [id=65519]
+  0x00007f00d454a800 WatcherThread [stack: 0x00007f00bae61000,0x00007f00baf61000] [id=65531]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000005d0e00000, size: 7922 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 234496K, used 216146K [0x000000071af80000, 0x000000072bc80000, 0x00000007c0000000)
+  eden space 222208K, 97% used [0x000000071af80000,0x0000000728294998,0x0000000728880000)
+  from space 12288K, 0% used [0x0000000729c80000,0x0000000729c80000,0x000000072a880000)
+  to   space 20480K, 0% used [0x000000072a880000,0x000000072a880000,0x000000072bc80000)
+ ParOldGen       total 385024K, used 16543K [0x00000005d0e00000, 0x00000005e8600000, 0x000000071af80000)
+  object space 385024K, 4% used [0x00000005d0e00000,0x00000005d1e27e08,0x00000005e8600000)
+ Metaspace       used 42760K, capacity 45858K, committed 46080K, reserved 1089536K
+  class space    used 5624K, capacity 6142K, committed 6144K, reserved 1048576K
+
+Card table byte_map: [0x00007f00d83a7000,0x00007f00d9321000] byte_map_base: 0x00007f00d5520000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f00da64eec0
+ Begin Bits: [0x00007f0084670000, 0x00007f008c238000)
+ End Bits:   [0x00007f008c238000, 0x00007f0093e00000)
+
+Polling page: 0x00007f00da9b9000
+
+CodeCache: size=245760Kb used=16293Kb max_used=16304Kb free=229466Kb
+ bounds [0x00007f00c5000000, 0x00007f00c6000000, 0x00007f00d4000000]
+ total_blobs=4992 nmethods=4492 adapters=413
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 17.710 Thread 0x00007f00d40d1800 nmethod 4535 0x00007f00c5fe8cd0 code [0x00007f00c5fe8e60, 0x00007f00c5fe9298]
+Event: 17.710 Thread 0x00007f00d40d1800 4536   !   3       org.bytedeco.javacpp.Loader::getCacheDir (255 bytes)
+Event: 17.712 Thread 0x00007f00d40d1800 nmethod 4536 0x00007f00c5fe9450 code [0x00007f00c5fe9d80, 0x00007f00c5fefba8]
+Event: 17.712 Thread 0x00007f00d40d1800 4534       3       java.io.File::toString (5 bytes)
+Event: 17.712 Thread 0x00007f00d40d1800 nmethod 4534 0x00007f00c5fbee90 code [0x00007f00c5fbf000, 0x00007f00c5fbf170]
+Event: 17.713 Thread 0x00007f00d40ca800 nmethod 4533 0x00007f00c5fe6c50 code [0x00007f00c5fe6dc0, 0x00007f00c5fe7438]
+Event: 17.713 Thread 0x00007f00d40d1800 4537       3       java.lang.StringBuilder::append (8 bytes)
+Event: 17.713 Thread 0x00007f00d40d1800 nmethod 4537 0x00007f00c5fe68d0 code [0x00007f00c5fe6a40, 0x00007f00c5fe6bc8]
+Event: 17.713 Thread 0x00007f00d40d1800 4538       1       java.lang.StackTraceElement::getClassName (5 bytes)
+Event: 17.713 Thread 0x00007f00d40d1800 nmethod 4538 0x00007f00c5fe6610 code [0x00007f00c5fe6760, 0x00007f00c5fe6870]
+
+GC Heap History (10 events):
+Event: 0.477 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 147968K, used 116842K [0x000000071af80000, 0x0000000725480000, 0x00000007c0000000)
+  eden space 126976K, 92% used [0x000000071af80000,0x000000072219aaa8,0x0000000722b80000)
+  from space 20992K, 0% used [0x0000000724000000,0x0000000724000000,0x0000000725480000)
+  to   space 20992K, 0% used [0x0000000722b80000,0x0000000722b80000,0x0000000724000000)
+ ParOldGen       total 338944K, used 0K [0x00000005d0e00000, 0x00000005e5900000, 0x000000071af80000)
+  object space 338944K, 0% used [0x00000005d0e00000,0x00000005d0e00000,0x00000005e5900000)
+ Metaspace       used 20507K, capacity 21216K, committed 21296K, reserved 1069056K
+  class space    used 2540K, capacity 2688K, committed 2688K, reserved 1048576K
+Event: 0.483 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 147968K, used 13694K [0x000000071af80000, 0x000000072d080000, 0x00000007c0000000)
+  eden space 126976K, 0% used [0x000000071af80000,0x000000071af80000,0x0000000722b80000)
+  from space 20992K, 65% used [0x0000000722b80000,0x00000007238df8d8,0x0000000724000000)
+  to   space 20992K, 0% used [0x000000072bc00000,0x000000072bc00000,0x000000072d080000)
+ ParOldGen       total 338944K, used 16K [0x00000005d0e00000, 0x00000005e5900000, 0x000000071af80000)
+  object space 338944K, 0% used [0x00000005d0e00000,0x00000005d0e04000,0x00000005e5900000)
+ Metaspace       used 20507K, capacity 21216K, committed 21296K, reserved 1069056K
+  class space    used 2540K, capacity 2688K, committed 2688K, reserved 1048576K
+}
+Event: 0.483 GC heap before
+{Heap before GC invocations=2 (full 1):
+ PSYoungGen      total 147968K, used 13694K [0x000000071af80000, 0x000000072d080000, 0x00000007c0000000)
+  eden space 126976K, 0% used [0x000000071af80000,0x000000071af80000,0x0000000722b80000)
+  from space 20992K, 65% used [0x0000000722b80000,0x00000007238df8d8,0x0000000724000000)
+  to   space 20992K, 0% used [0x000000072bc00000,0x000000072bc00000,0x000000072d080000)
+ ParOldGen       total 338944K, used 16K [0x00000005d0e00000, 0x00000005e5900000, 0x000000071af80000)
+  object space 338944K, 0% used [0x00000005d0e00000,0x00000005d0e04000,0x00000005e5900000)
+ Metaspace       used 20507K, capacity 21216K, committed 21296K, reserved 1069056K
+  class space    used 2540K, capacity 2688K, committed 2688K, reserved 1048576K
+Event: 0.496 GC heap after
+Heap after GC invocations=2 (full 1):
+ PSYoungGen      total 147968K, used 0K [0x000000071af80000, 0x000000072d080000, 0x00000007c0000000)
+  eden space 126976K, 0% used [0x000000071af80000,0x000000071af80000,0x0000000722b80000)
+  from space 20992K, 0% used [0x0000000722b80000,0x0000000722b80000,0x0000000724000000)
+  to   space 20992K, 0% used [0x000000072bc00000,0x000000072bc00000,0x000000072d080000)
+ ParOldGen       total 229376K, used 12922K [0x00000005d0e00000, 0x00000005dee00000, 0x000000071af80000)
+  object space 229376K, 5% used [0x00000005d0e00000,0x00000005d1a9ea20,0x00000005dee00000)
+ Metaspace       used 20507K, capacity 21216K, committed 21296K, reserved 1069056K
+  class space    used 2540K, capacity 2688K, committed 2688K, reserved 1048576K
+}
+Event: 0.792 GC heap before
+{Heap before GC invocations=3 (full 1):
+ PSYoungGen      total 147968K, used 126976K [0x000000071af80000, 0x000000072d080000, 0x00000007c0000000)
+  eden space 126976K, 100% used [0x000000071af80000,0x0000000722b80000,0x0000000722b80000)
+  from space 20992K, 0% used [0x0000000722b80000,0x0000000722b80000,0x0000000724000000)
+  to   space 20992K, 0% used [0x000000072bc00000,0x000000072bc00000,0x000000072d080000)
+ ParOldGen       total 229376K, used 12922K [0x00000005d0e00000, 0x00000005dee00000, 0x000000071af80000)
+  object space 229376K, 5% used [0x00000005d0e00000,0x00000005d1a9ea20,0x00000005dee00000)
+ Metaspace       used 26298K, capacity 27500K, committed 27648K, reserved 1073152K
+  class space    used 3342K, capacity 3582K, committed 3584K, reserved 1048576K
+Event: 0.796 GC heap after
+Heap after GC invocations=3 (full 1):
+ PSYoungGen      total 176128K, used 9569K [0x000000071af80000, 0x000000072c580000, 0x00000007c0000000)
+  eden space 166400K, 0% used [0x000000071af80000,0x000000071af80000,0x0000000725200000)
+  from space 9728K, 98% used [0x000000072bc00000,0x000000072c558440,0x000000072c580000)
+  to   space 20992K, 0% used [0x0000000729c80000,0x0000000729c80000,0x000000072b100000)
+ ParOldGen       total 229376K, used 12930K [0x00000005d0e00000, 0x00000005dee00000, 0x000000071af80000)
+  object space 229376K, 5% used [0x00000005d0e00000,0x00000005d1aa0a20,0x00000005dee00000)
+ Metaspace       used 26298K, capacity 27500K, committed 27648K, reserved 1073152K
+  class space    used 3342K, capacity 3582K, committed 3584K, reserved 1048576K
+}
+Event: 1.157 GC heap before
+{Heap before GC invocations=4 (full 1):
+ PSYoungGen      total 176128K, used 123529K [0x000000071af80000, 0x000000072c580000, 0x00000007c0000000)
+  eden space 166400K, 68% used [0x000000071af80000,0x0000000721eca1a0,0x0000000725200000)
+  from space 9728K, 98% used [0x000000072bc00000,0x000000072c558440,0x000000072c580000)
+  to   space 20992K, 0% used [0x0000000729c80000,0x0000000729c80000,0x000000072b100000)
+ ParOldGen       total 229376K, used 12930K [0x00000005d0e00000, 0x00000005dee00000, 0x000000071af80000)
+  object space 229376K, 5% used [0x00000005d0e00000,0x00000005d1aa0a20,0x00000005dee00000)
+ Metaspace       used 33335K, capacity 35390K, committed 35456K, reserved 1079296K
+  class space    used 4314K, capacity 4691K, committed 4736K, reserved 1048576K
+Event: 1.163 GC heap after
+Heap after GC invocations=4 (full 1):
+ PSYoungGen      total 234496K, used 12262K [0x000000071af80000, 0x000000072bc80000, 0x00000007c0000000)
+  eden space 222208K, 0% used [0x000000071af80000,0x000000071af80000,0x0000000728880000)
+  from space 12288K, 99% used [0x0000000729c80000,0x000000072a8798a0,0x000000072a880000)
+  to   space 20480K, 0% used [0x000000072a880000,0x000000072a880000,0x000000072bc80000)
+ ParOldGen       total 229376K, used 12938K [0x00000005d0e00000, 0x00000005dee00000, 0x000000071af80000)
+  object space 229376K, 5% used [0x00000005d0e00000,0x00000005d1aa2a20,0x00000005dee00000)
+ Metaspace       used 33335K, capacity 35390K, committed 35456K, reserved 1079296K
+  class space    used 4314K, capacity 4691K, committed 4736K, reserved 1048576K
+}
+Event: 1.163 GC heap before
+{Heap before GC invocations=5 (full 2):
+ PSYoungGen      total 234496K, used 12262K [0x000000071af80000, 0x000000072bc80000, 0x00000007c0000000)
+  eden space 222208K, 0% used [0x000000071af80000,0x000000071af80000,0x0000000728880000)
+  from space 12288K, 99% used [0x0000000729c80000,0x000000072a8798a0,0x000000072a880000)
+  to   space 20480K, 0% used [0x000000072a880000,0x000000072a880000,0x000000072bc80000)
+ ParOldGen       total 229376K, used 12938K [0x00000005d0e00000, 0x00000005dee00000, 0x000000071af80000)
+  object space 229376K, 5% used [0x00000005d0e00000,0x00000005d1aa2a20,0x00000005dee00000)
+ Metaspace       used 33335K, capacity 35390K, committed 35456K, reserved 1079296K
+  class space    used 4314K, capacity 4691K, committed 4736K, reserved 1048576K
+Event: 1.189 GC heap after
+Heap after GC invocations=5 (full 2):
+ PSYoungGen      total 234496K, used 0K [0x000000071af80000, 0x000000072bc80000, 0x00000007c0000000)
+  eden space 222208K, 0% used [0x000000071af80000,0x000000071af80000,0x0000000728880000)
+  from space 12288K, 0% used [0x0000000729c80000,0x0000000729c80000,0x000000072a880000)
+  to   space 20480K, 0% used [0x000000072a880000,0x000000072a880000,0x000000072bc80000)
+ ParOldGen       total 385024K, used 16543K [0x00000005d0e00000, 0x00000005e8600000, 0x000000071af80000)
+  object space 385024K, 4% used [0x00000005d0e00000,0x00000005d1e27e08,0x00000005e8600000)
+ Metaspace       used 33335K, capacity 35390K, committed 35456K, reserved 1079296K
+  class space    used 4314K, capacity 4691K, committed 4736K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 11.141 Thread 0x00007f00d507c800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f00c5d653c0 method=java.util.TreeMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; @ 68
+Event: 17.515 Thread 0x00007f00d524b800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f00c547c924 method=java.lang.CharacterDataLatin1.isWhitespace(I)Z @ 14
+Event: 17.518 Thread 0x00007f00d524b800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f00c5345320 method=java.lang.CharacterDataLatin1.isWhitespace(I)Z @ 14
+Event: 17.526 Thread 0x00007f00d524b800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f00c5ec0354 method=org.apache.tomcat.util.http.fileupload.MultipartStream.findSeparator()I @ 55
+Event: 17.538 Thread 0x00007f00d524b800 Uncommon trap: reason=null_check action=make_not_entrant pc=0x00007f00c5eda144 method=java.lang.Class.isAnnotation()Z @ 1
+Event: 17.552 Thread 0x00007f00d524b800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f00c521cd54 method=sun.nio.cs.UTF_8$Encoder.encode([CII[B)I @ 33
+Event: 17.566 Thread 0x00007f00d524b800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f00c5eba1ec method=java.util.Properties$LineReader.readLine()I @ 105
+Event: 17.567 Thread 0x00007f00d524b800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f00c5eb3fdc method=java.util.Properties$LineReader.readLine()I @ 105
+Event: 17.642 Thread 0x00007f00d524b800 Uncommon trap: reason=range_check action=make_not_entrant pc=0x00007f00c5f35184 method=java.util.zip.ZipUtils.get16([BI)I @ 10
+Event: 17.711 Thread 0x00007f00d524b800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f00c52384d0 method=java.lang.AbstractStringBuilder.append(Ljava/lang/String;)Ljava/lang/AbstractStringBuilder; @ 1
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 14.991 Thread 0x00007f0034001800 Exception <a 'java/lang/ClassNotFoundException': org/springframework/context/support/LiveBeansView> (0x000000072199f4b8) thrown at [/home/zulu_re/workspace/Zulu/zulu-platform-build/58928/zulu-src.git/hotspot/src/share/vm/classfile/systemDictionary.cpp, li
+Event: 14.991 Thread 0x00007f0034001800 Exception <a 'java/lang/ClassNotFoundException': org/springframework/boot/actuate/endpoint/jmx/EndpointMBean> (0x000000072199f8e8) thrown at [/home/zulu_re/workspace/Zulu/zulu-platform-build/58928/zulu-src.git/hotspot/src/share/vm/classfile/systemDictiona
+Event: 14.991 Thread 0x00007f0034001800 Exception <a 'java/lang/ClassNotFoundException': org/springframework/boot/actuate/endpoint/jmx/DataEndpointMBean> (0x000000072199fe30) thrown at [/home/zulu_re/workspace/Zulu/zulu-platform-build/58928/zulu-src.git/hotspot/src/share/vm/classfile/systemDict
+Event: 14.991 Thread 0x00007f0034001800 Exception <a 'java/lang/ClassNotFoundException': org/springframework/context/support/LiveBeansView> (0x00000007219a0360) thrown at [/home/zulu_re/workspace/Zulu/zulu-platform-build/58928/zulu-src.git/hotspot/src/share/vm/classfile/systemDictionary.cpp, li
+Event: 14.991 Thread 0x00007f0034001800 Exception <a 'java/lang/ClassNotFoundException': org/springframework/boot/actuate/endpoint/jmx/EndpointMBean> (0x00000007219a06b0) thrown at [/home/zulu_re/workspace/Zulu/zulu-platform-build/58928/zulu-src.git/hotspot/src/share/vm/classfile/systemDictiona
+Event: 14.991 Thread 0x00007f0034001800 Exception <a 'java/lang/ClassNotFoundException': org/springframework/boot/actuate/endpoint/jmx/DataEndpointMBean> (0x00000007219a0bf0) thrown at [/home/zulu_re/workspace/Zulu/zulu-platform-build/58928/zulu-src.git/hotspot/src/share/vm/classfile/systemDict
+Event: 14.991 Thread 0x00007f0034001800 Exception <a 'java/lang/ClassNotFoundException': org/springframework/context/support/LiveBeansView> (0x00000007219a1118) thrown at [/home/zulu_re/workspace/Zulu/zulu-platform-build/58928/zulu-src.git/hotspot/src/share/vm/classfile/systemDictionary.cpp, li
+Event: 17.566 Thread 0x00007f00d524b800 Implicit null exception at 0x00007f00c5eb9a40 to 0x00007f00c5eba1bd
+Event: 17.567 Thread 0x00007f00d524b800 Implicit null exception at 0x00007f00c5eb37ae to 0x00007f00c5eb3fa1
+Event: 17.711 Thread 0x00007f00d524b800 Implicit null exception at 0x00007f00c52380f5 to 0x00007f00c52384bd
+
+Events (10 events):
+Event: 17.711 loading class ch/qos/logback/classic/spi/StackTraceElementProxy
+Event: 17.711 loading class ch/qos/logback/classic/spi/StackTraceElementProxy done
+Event: 17.712 loading class ch/qos/logback/classic/spi/ThrowableProxyUtil
+Event: 17.712 loading class ch/qos/logback/classic/spi/ThrowableProxyUtil done
+Event: 17.712 loading class ch/qos/logback/classic/spi/PackagingDataCalculator
+Event: 17.712 loading class ch/qos/logback/classic/spi/PackagingDataCalculator done
+Event: 17.712 loading class ch/qos/logback/classic/spi/STEUtil
+Event: 17.712 loading class ch/qos/logback/classic/spi/STEUtil done
+Event: 17.712 loading class ch/qos/logback/classic/spi/ClassPackagingData
+Event: 17.712 loading class ch/qos/logback/classic/spi/ClassPackagingData done
+
+
+Dynamic libraries:
+5d0e00000-5e8600000 rw-p 00000000 00:00 0 
+5e8600000-71af80000 ---p 00000000 00:00 0 
+71af80000-72bc80000 rw-p 00000000 00:00 0 
+72bc80000-7c0000000 ---p 00000000 00:00 0 
+7c0000000-7c0600000 rw-p 00000000 00:00 0 
+7c0600000-800000000 ---p 00000000 00:00 0 
+55e9a73f0000-55e9a73f1000 r-xp 00000000 00:22 381103                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/bin/java
+55e9a73f1000-55e9a73f2000 r--p 00000000 00:22 381103                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/bin/java
+55e9a73f2000-55e9a73f3000 rw-p 00001000 00:22 381103                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/bin/java
+55e9dfacb000-55e9dfaec000 rw-p 00000000 00:00 0                          [heap]
+7effdc000000-7effdc021000 rw-p 00000000 00:00 0 
+7effdc021000-7effe0000000 ---p 00000000 00:00 0 
+7effe0000000-7effe0021000 rw-p 00000000 00:00 0 
+7effe0021000-7effe4000000 ---p 00000000 00:00 0 
+7effe4000000-7effe4021000 rw-p 00000000 00:00 0 
+7effe4021000-7effe8000000 ---p 00000000 00:00 0 
+7effe8000000-7effe8021000 rw-p 00000000 00:00 0 
+7effe8021000-7effec000000 ---p 00000000 00:00 0 
+7effec000000-7effec021000 rw-p 00000000 00:00 0 
+7effec021000-7efff0000000 ---p 00000000 00:00 0 
+7efff0000000-7efff0021000 rw-p 00000000 00:00 0 
+7efff0021000-7efff4000000 ---p 00000000 00:00 0 
+7efff4000000-7efff4021000 rw-p 00000000 00:00 0 
+7efff4021000-7efff8000000 ---p 00000000 00:00 0 
+7efff8000000-7efff8021000 rw-p 00000000 00:00 0 
+7efff8021000-7efffc000000 ---p 00000000 00:00 0 
+7efffc000000-7efffc021000 rw-p 00000000 00:00 0 
+7efffc021000-7f0000000000 ---p 00000000 00:00 0 
+7f0000000000-7f0000021000 rw-p 00000000 00:00 0 
+7f0000021000-7f0004000000 ---p 00000000 00:00 0 
+7f0004000000-7f0004021000 rw-p 00000000 00:00 0 
+7f0004021000-7f0008000000 ---p 00000000 00:00 0 
+7f0008000000-7f0008021000 rw-p 00000000 00:00 0 
+7f0008021000-7f000c000000 ---p 00000000 00:00 0 
+7f000c000000-7f000c021000 rw-p 00000000 00:00 0 
+7f000c021000-7f0010000000 ---p 00000000 00:00 0 
+7f0010000000-7f0011538000 rw-p 00000000 00:00 0 
+7f0011538000-7f0014000000 ---p 00000000 00:00 0 
+7f0014000000-7f0014024000 rw-p 00000000 00:00 0 
+7f0014024000-7f0018000000 ---p 00000000 00:00 0 
+7f0018000000-7f0018021000 rw-p 00000000 00:00 0 
+7f0018021000-7f001c000000 ---p 00000000 00:00 0 
+7f001c000000-7f001c021000 rw-p 00000000 00:00 0 
+7f001c021000-7f0020000000 ---p 00000000 00:00 0 
+7f0020000000-7f00200c5000 rw-p 00000000 00:00 0 
+7f00200c5000-7f0024000000 ---p 00000000 00:00 0 
+7f0024000000-7f00241a8000 rw-p 00000000 00:00 0 
+7f00241a8000-7f0028000000 ---p 00000000 00:00 0 
+7f0028000000-7f0028021000 rw-p 00000000 00:00 0 
+7f0028021000-7f002c000000 ---p 00000000 00:00 0 
+7f002c000000-7f002c021000 rw-p 00000000 00:00 0 
+7f002c021000-7f0030000000 ---p 00000000 00:00 0 
+7f0030000000-7f0030021000 rw-p 00000000 00:00 0 
+7f0030021000-7f0034000000 ---p 00000000 00:00 0 
+7f0034000000-7f0034021000 rw-p 00000000 00:00 0 
+7f0034021000-7f0038000000 ---p 00000000 00:00 0 
+7f0038000000-7f0038021000 rw-p 00000000 00:00 0 
+7f0038021000-7f003c000000 ---p 00000000 00:00 0 
+7f003c000000-7f003c91a000 rw-p 00000000 00:00 0 
+7f003c91a000-7f0040000000 ---p 00000000 00:00 0 
+7f0040000000-7f0040021000 rw-p 00000000 00:00 0 
+7f0040021000-7f0044000000 ---p 00000000 00:00 0 
+7f0044000000-7f004550c000 rw-p 00000000 00:00 0 
+7f004550c000-7f0048000000 ---p 00000000 00:00 0 
+7f0048000000-7f0049266000 rw-p 00000000 00:00 0 
+7f0049266000-7f004c000000 ---p 00000000 00:00 0 
+7f004c000000-7f004d7cf000 rw-p 00000000 00:00 0 
+7f004d7cf000-7f0050000000 ---p 00000000 00:00 0 
+7f0052000000-7f005fe70000 r--p 00000000 00:22 219267                     /usr/lib/locale/locale-archive
+7f0060000000-7f0060021000 rw-p 00000000 00:00 0 
+7f0060021000-7f0064000000 ---p 00000000 00:00 0 
+7f0064000000-7f0064021000 rw-p 00000000 00:00 0 
+7f0064021000-7f0068000000 ---p 00000000 00:00 0 
+7f0068000000-7f0068021000 rw-p 00000000 00:00 0 
+7f0068021000-7f006c000000 ---p 00000000 00:00 0 
+7f006c000000-7f006c021000 rw-p 00000000 00:00 0 
+7f006c021000-7f0070000000 ---p 00000000 00:00 0 
+7f0070000000-7f0070021000 rw-p 00000000 00:00 0 
+7f0070021000-7f0074000000 ---p 00000000 00:00 0 
+7f0074000000-7f0074021000 rw-p 00000000 00:00 0 
+7f0074021000-7f0078000000 ---p 00000000 00:00 0 
+7f0078000000-7f0078021000 rw-p 00000000 00:00 0 
+7f0078021000-7f007c000000 ---p 00000000 00:00 0 
+7f0080000000-7f0080021000 rw-p 00000000 00:00 0 
+7f0080021000-7f0084000000 ---p 00000000 00:00 0 
+7f0084670000-7f0093e00000 rw-p 00000000 00:00 0 
+7f0094000000-7f0094021000 rw-p 00000000 00:00 0 
+7f0094021000-7f0098000000 ---p 00000000 00:00 0 
+7f009c000000-7f009c021000 rw-p 00000000 00:00 0 
+7f009c021000-7f00a0000000 ---p 00000000 00:00 0 
+7f00a0ffa000-7f00a0ffb000 ---p 00000000 00:00 0 
+7f00a0ffb000-7f00a17fb000 rw-p 00000000 00:00 0 
+7f00a17fb000-7f00a17fc000 ---p 00000000 00:00 0 
+7f00a17fc000-7f00a1ffc000 rw-p 00000000 00:00 0 
+7f00a1ffc000-7f00a1ffd000 ---p 00000000 00:00 0 
+7f00a1ffd000-7f00a27fd000 rw-p 00000000 00:00 0 
+7f00a27fd000-7f00a27fe000 ---p 00000000 00:00 0 
+7f00a27fe000-7f00a2ffe000 rw-p 00000000 00:00 0 
+7f00a2ffe000-7f00a2fff000 ---p 00000000 00:00 0 
+7f00a2fff000-7f00a37ff000 rw-p 00000000 00:00 0 
+7f00a37ff000-7f00a3800000 ---p 00000000 00:00 0 
+7f00a3800000-7f00a4000000 rw-p 00000000 00:00 0 
+7f00a4000000-7f00a4021000 rw-p 00000000 00:00 0 
+7f00a4021000-7f00a8000000 ---p 00000000 00:00 0 
+7f00a81f9000-7f00a81fa000 ---p 00000000 00:00 0 
+7f00a81fa000-7f00a89fa000 rw-p 00000000 00:00 0 
+7f00a89fa000-7f00a89fb000 ---p 00000000 00:00 0 
+7f00a89fb000-7f00a91fb000 rw-p 00000000 00:00 0 
+7f00a91fb000-7f00a91fc000 ---p 00000000 00:00 0 
+7f00a91fc000-7f00a99fc000 rw-p 00000000 00:00 0 
+7f00a99fc000-7f00a99fd000 ---p 00000000 00:00 0 
+7f00a99fd000-7f00aa1fd000 rw-p 00000000 00:00 0 
+7f00aa1fd000-7f00aa1fe000 ---p 00000000 00:00 0 
+7f00aa1fe000-7f00aa9fe000 rw-p 00000000 00:00 0 
+7f00aa9fe000-7f00aa9ff000 ---p 00000000 00:00 0 
+7f00aa9ff000-7f00ab1ff000 rw-p 00000000 00:00 0 
+7f00ab1ff000-7f00ab200000 ---p 00000000 00:00 0 
+7f00ab200000-7f00aba00000 rw-p 00000000 00:00 0 
+7f00aba00000-7f00aba85000 r--p 00000000 00:22 84245                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavfilter.so.8
+7f00aba85000-7f00abdc2000 r-xp 00085000 00:22 84245                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavfilter.so.8
+7f00abdc2000-7f00abe7a000 r--p 003c2000 00:22 84245                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavfilter.so.8
+7f00abe7a000-7f00abe7b000 ---p 0047a000 00:22 84245                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavfilter.so.8
+7f00abe7b000-7f00abef8000 r--p 0047a000 00:22 84245                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavfilter.so.8
+7f00abef8000-7f00abefa000 rw-p 004f7000 00:22 84245                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavfilter.so.8
+7f00abefa000-7f00abefd000 rw-p 00000000 00:00 0 
+7f00ac000000-7f00ac021000 rw-p 00000000 00:00 0 
+7f00ac021000-7f00b0000000 ---p 00000000 00:00 0 
+7f00b0400000-7f00b04be000 r--p 00000000 00:22 84239                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavformat.so.59
+7f00b04be000-7f00b0ac4000 r-xp 000be000 00:22 84239                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavformat.so.59
+7f00b0ac4000-7f00b0c82000 r--p 006c4000 00:22 84239                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavformat.so.59
+7f00b0c82000-7f00b0d16000 r--p 00881000 00:22 84239                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavformat.so.59
+7f00b0d16000-7f00b0d1f000 rw-p 00915000 00:22 84239                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavformat.so.59
+7f00b0d1f000-7f00b0d28000 rw-p 00000000 00:00 0 
+7f00b0e00000-7f00b0e7b000 r--p 00000000 00:22 84236                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavcodec.so.59
+7f00b0e7b000-7f00b1c5f000 r-xp 0007b000 00:22 84236                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavcodec.so.59
+7f00b1c5f000-7f00b2027000 r--p 00e5f000 00:22 84236                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavcodec.so.59
+7f00b2027000-7f00b2096000 r--p 01226000 00:22 84236                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavcodec.so.59
+7f00b2096000-7f00b209f000 rw-p 01295000 00:22 84236                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavcodec.so.59
+7f00b209f000-7f00b26a5000 rw-p 00000000 00:00 0 
+7f00b2800000-7f00b2900000 rw-p 00000000 00:00 0 
+7f00b2900000-7f00b2a00000 ---p 00000000 00:00 0 
+7f00b2a00000-7f00b2a02000 r-xp 00000000 00:22 84228                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libva-drm.so.1
+7f00b2a02000-7f00b2c01000 ---p 00002000 00:22 84228                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libva-drm.so.1
+7f00b2c01000-7f00b2c02000 r--p 00001000 00:22 84228                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libva-drm.so.1
+7f00b2c02000-7f00b2c03000 rw-p 00002000 00:22 84228                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libva-drm.so.1
+7f00b2c07000-7f00b2c1c000 r--p 00000000 00:22 84230                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavutil.so.57
+7f00b2c1c000-7f00b2cbe000 r-xp 00015000 00:22 84230                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavutil.so.57
+7f00b2cbe000-7f00b2ce1000 r--p 000b7000 00:22 84230                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavutil.so.57
+7f00b2ce1000-7f00b2ce2000 ---p 000da000 00:22 84230                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavutil.so.57
+7f00b2ce2000-7f00b2cef000 r--p 000da000 00:22 84230                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavutil.so.57
+7f00b2cef000-7f00b2cf0000 rw-p 000e7000 00:22 84230                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavutil.so.57
+7f00b2cf0000-7f00b2e00000 rw-p 00000000 00:00 0 
+7f00b2e00000-7f00b2e10000 r-xp 00000000 00:22 84226                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libdrm.so.2
+7f00b2e10000-7f00b300f000 ---p 00010000 00:22 84226                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libdrm.so.2
+7f00b300f000-7f00b3010000 r--p 0000f000 00:22 84226                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libdrm.so.2
+7f00b3010000-7f00b3011000 rw-p 00010000 00:22 84226                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libdrm.so.2
+7f00b30ec000-7f00b3196000 r-xp 00000000 00:22 220359                     /usr/lib64/libasound.so.2.0.0
+7f00b3196000-7f00b31f7000 r--p 000aa000 00:22 220359                     /usr/lib64/libasound.so.2.0.0
+7f00b31f7000-7f00b31ff000 r--p 0010b000 00:22 220359                     /usr/lib64/libasound.so.2.0.0
+7f00b31ff000-7f00b3200000 rw-p 00113000 00:22 220359                     /usr/lib64/libasound.so.2.0.0
+7f00b3200000-7f00b321f000 r-xp 00000000 00:22 84224                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libva.so.1
+7f00b321f000-7f00b341e000 ---p 0001f000 00:22 84224                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libva.so.1
+7f00b341e000-7f00b341f000 r--p 0001e000 00:22 84224                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libva.so.1
+7f00b341f000-7f00b3420000 rw-p 0001f000 00:22 84224                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libva.so.1
+7f00b34b2000-7f00b34b5000 r--p 00000000 00:22 84242                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libswscale.so.6
+7f00b34b5000-7f00b3537000 r-xp 00003000 00:22 84242                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libswscale.so.6
+7f00b3537000-7f00b3547000 r--p 00085000 00:22 84242                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libswscale.so.6
+7f00b3547000-7f00b3548000 ---p 00095000 00:22 84242                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libswscale.so.6
+7f00b3548000-7f00b3549000 r--p 00095000 00:22 84242                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libswscale.so.6
+7f00b3549000-7f00b354a000 rw-p 00096000 00:22 84242                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libswscale.so.6
+7f00b354a000-7f00b3552000 rw-p 00000000 00:00 0 
+7f00b3552000-7f00b3584000 r--p 00000000 00:22 84241                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavformat.so
+7f00b3584000-7f00b35ca000 r-xp 00032000 00:22 84241                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavformat.so
+7f00b35ca000-7f00b35ef000 r--p 00078000 00:22 84241                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavformat.so
+7f00b35ef000-7f00b35f0000 ---p 0009d000 00:22 84241                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavformat.so
+7f00b35f0000-7f00b35fd000 r--p 0009d000 00:22 84241                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavformat.so
+7f00b35fd000-7f00b35fe000 rw-p 000aa000 00:22 84241                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavformat.so
+7f00b35fe000-7f00b3600000 rw-p 00000000 00:00 0 
+7f00b3600000-7f00b3741000 r-xp 00000000 00:22 220027                     /usr/lib64/libstdc++.so.6.0.34
+7f00b3741000-7f00b3861000 r--p 00141000 00:22 220027                     /usr/lib64/libstdc++.so.6.0.34
+7f00b3861000-7f00b3872000 r--p 00260000 00:22 220027                     /usr/lib64/libstdc++.so.6.0.34
+7f00b3872000-7f00b3873000 rw-p 00271000 00:22 220027                     /usr/lib64/libstdc++.so.6.0.34
+7f00b3873000-7f00b3877000 rw-p 00000000 00:00 0 
+7f00b38ba000-7f00b38c2000 r--p 00000000 00:22 84250                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavdevice.so
+7f00b38c2000-7f00b38cd000 r-xp 00008000 00:22 84250                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavdevice.so
+7f00b38cd000-7f00b38d3000 r--p 00013000 00:22 84250                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavdevice.so
+7f00b38d3000-7f00b38d4000 ---p 00019000 00:22 84250                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavdevice.so
+7f00b38d4000-7f00b38d5000 r--p 00019000 00:22 84250                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavdevice.so
+7f00b38d5000-7f00b38d6000 rw-p 0001a000 00:22 84250                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavdevice.so
+7f00b38d6000-7f00b3931000 r--p 00000000 00:22 84232                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavutil.so
+7f00b3931000-7f00b39b5000 r-xp 0005b000 00:22 84232                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavutil.so
+7f00b39b5000-7f00b39ef000 r--p 000df000 00:22 84232                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavutil.so
+7f00b39ef000-7f00b39f0000 ---p 00119000 00:22 84232                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavutil.so
+7f00b39f0000-7f00b39fd000 r--p 00119000 00:22 84232                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavutil.so
+7f00b39fd000-7f00b39ff000 rw-p 00126000 00:22 84232                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavutil.so
+7f00b39ff000-7f00b3c00000 rw-p 00000000 00:00 0 
+7f00b3c00000-7f00b3e00000 rw-p 00000000 00:00 0 
+7f00b3e00000-7f00b3e04000 ---p 00000000 00:00 0 
+7f00b3e04000-7f00b3f00000 rw-p 00000000 00:00 0 
+7f00b3f00000-7f00b3f04000 ---p 00000000 00:00 0 
+7f00b3f04000-7f00b4000000 rw-p 00000000 00:00 0 
+7f00b4000000-7f00b4021000 rw-p 00000000 00:00 0 
+7f00b4021000-7f00b8000000 ---p 00000000 00:00 0 
+7f00b800c000-7f00b800f000 r-xp 00000000 00:22 39327                      /usr/lib64/libXau.so.6.0.0
+7f00b800f000-7f00b8010000 r--p 00003000 00:22 39327                      /usr/lib64/libXau.so.6.0.0
+7f00b8010000-7f00b8011000 r--p 00004000 00:22 39327                      /usr/lib64/libXau.so.6.0.0
+7f00b8011000-7f00b8012000 rw-p 00000000 00:00 0 
+7f00b8012000-7f00b8026000 r-xp 00000000 00:22 41041                      /usr/lib64/libxcb.so.1.1.0
+7f00b8026000-7f00b803a000 r--p 00014000 00:22 41041                      /usr/lib64/libxcb.so.1.1.0
+7f00b803a000-7f00b803b000 r--p 00028000 00:22 41041                      /usr/lib64/libxcb.so.1.1.0
+7f00b803b000-7f00b803c000 rw-p 00029000 00:22 41041                      /usr/lib64/libxcb.so.1.1.0
+7f00b803c000-7f00b8069000 r--p 00000000 00:22 84238                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavcodec.so
+7f00b8069000-7f00b80a7000 r-xp 0002d000 00:22 84238                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavcodec.so
+7f00b80a7000-7f00b80cf000 r--p 0006b000 00:22 84238                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavcodec.so
+7f00b80cf000-7f00b80d0000 ---p 00093000 00:22 84238                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavcodec.so
+7f00b80d0000-7f00b80e7000 r--p 00093000 00:22 84238                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavcodec.so
+7f00b80e7000-7f00b80e8000 rw-p 000aa000 00:22 84238                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavcodec.so
+7f00b80e8000-7f00b80e9000 rw-p 00000000 00:00 0 
+7f00b80e9000-7f00b80ed000 ---p 00000000 00:00 0 
+7f00b80ed000-7f00b81e9000 rw-p 00000000 00:00 0 
+7f00b81e9000-7f00b81ed000 ---p 00000000 00:00 0 
+7f00b81ed000-7f00b82e9000 rw-p 00000000 00:00 0 
+7f00b82e9000-7f00b82ed000 ---p 00000000 00:00 0 
+7f00b82ed000-7f00b83e9000 rw-p 00000000 00:00 0 
+7f00b83e9000-7f00b83ed000 ---p 00000000 00:00 0 
+7f00b83ed000-7f00b84e9000 rw-p 00000000 00:00 0 
+7f00b84e9000-7f00b84ed000 ---p 00000000 00:00 0 
+7f00b84ed000-7f00b85e9000 rw-p 00000000 00:00 0 
+7f00b85e9000-7f00b85ed000 ---p 00000000 00:00 0 
+7f00b85ed000-7f00b86e9000 rw-p 00000000 00:00 0 
+7f00b86e9000-7f00b86ed000 ---p 00000000 00:00 0 
+7f00b86ed000-7f00b87e9000 rw-p 00000000 00:00 0 
+7f00b87e9000-7f00b87ed000 ---p 00000000 00:00 0 
+7f00b87ed000-7f00b88e9000 rw-p 00000000 00:00 0 
+7f00b88e9000-7f00b88ed000 ---p 00000000 00:00 0 
+7f00b88ed000-7f00b89e9000 rw-p 00000000 00:00 0 
+7f00b8a00000-7f00b8a04000 ---p 00000000 00:00 0 
+7f00b8a04000-7f00b8b00000 rw-p 00000000 00:00 0 
+7f00b8b00000-7f00b8b04000 ---p 00000000 00:00 0 
+7f00b8b04000-7f00b8c00000 rw-p 00000000 00:00 0 
+7f00b8c00000-7f00b8e00000 rw-p 00000000 00:00 0 
+7f00b8e00000-7f00b9000000 rw-p 00000000 00:00 0 
+7f00b9000000-7f00b9004000 ---p 00000000 00:00 0 
+7f00b9004000-7f00b9100000 rw-p 00000000 00:00 0 
+7f00b9100000-7f00b9104000 ---p 00000000 00:00 0 
+7f00b9104000-7f00b9200000 rw-p 00000000 00:00 0 
+7f00b9200000-7f00b9400000 rw-p 00000000 00:00 0 
+7f00b9400000-7f00b9600000 rw-p 00000000 00:00 0 
+7f00b9600000-7f00b9800000 rw-p 00000000 00:00 0 
+7f00b9800000-7f00b9a00000 rw-p 00000000 00:00 0 
+7f00b9a03000-7f00b9a06000 r-xp 00000000 00:22 41033                      /usr/lib64/libxcb-xfixes.so.0.0.0
+7f00b9a06000-7f00b9a0a000 r--p 00003000 00:22 41033                      /usr/lib64/libxcb-xfixes.so.0.0.0
+7f00b9a0a000-7f00b9a0b000 r--p 00007000 00:22 41033                      /usr/lib64/libxcb-xfixes.so.0.0.0
+7f00b9a0b000-7f00b9a0c000 rw-p 00008000 00:22 41033                      /usr/lib64/libxcb-xfixes.so.0.0.0
+7f00b9a0c000-7f00b9a12000 r--p 00000000 00:22 84248                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavdevice.so.59
+7f00b9a12000-7f00b9a1b000 r-xp 00006000 00:22 84248                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavdevice.so.59
+7f00b9a1b000-7f00b9a1f000 r--p 0000f000 00:22 84248                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavdevice.so.59
+7f00b9a1f000-7f00b9a20000 ---p 00013000 00:22 84248                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavdevice.so.59
+7f00b9a20000-7f00b9a22000 r--p 00013000 00:22 84248                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavdevice.so.59
+7f00b9a22000-7f00b9a23000 rw-p 00015000 00:22 84248                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libavdevice.so.59
+7f00b9a23000-7f00b9a38000 r--p 00000000 00:22 84247                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavfilter.so
+7f00b9a38000-7f00b9a56000 r-xp 00015000 00:22 84247                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavfilter.so
+7f00b9a56000-7f00b9a65000 r--p 00033000 00:22 84247                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavfilter.so
+7f00b9a65000-7f00b9a69000 r--p 00041000 00:22 84247                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavfilter.so
+7f00b9a69000-7f00b9a6a000 rw-p 00045000 00:22 84247                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniavfilter.so
+7f00b9a6a000-7f00b9a71000 r--p 00000000 00:22 84244                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniswscale.so
+7f00b9a71000-7f00b9a7d000 r-xp 00007000 00:22 84244                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniswscale.so
+7f00b9a7d000-7f00b9a82000 r--p 00013000 00:22 84244                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniswscale.so
+7f00b9a82000-7f00b9a83000 ---p 00018000 00:22 84244                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniswscale.so
+7f00b9a83000-7f00b9a84000 r--p 00018000 00:22 84244                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniswscale.so
+7f00b9a84000-7f00b9a85000 rw-p 00019000 00:22 84244                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniswscale.so
+7f00b9a85000-7f00b9a8b000 r--p 00000000 00:22 84235                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniswresample.so
+7f00b9a8b000-7f00b9a94000 r-xp 00006000 00:22 84235                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniswresample.so
+7f00b9a94000-7f00b9a99000 r--p 0000f000 00:22 84235                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniswresample.so
+7f00b9a99000-7f00b9a9a000 r--p 00013000 00:22 84235                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniswresample.so
+7f00b9a9a000-7f00b9a9b000 rw-p 00014000 00:22 84235                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libjniswresample.so
+7f00b9a9b000-7f00b9a9e000 r--p 00000000 00:22 84233                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libswresample.so.4
+7f00b9a9e000-7f00b9ab2000 r-xp 00003000 00:22 84233                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libswresample.so.4
+7f00b9ab2000-7f00b9ab7000 r--p 00017000 00:22 84233                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libswresample.so.4
+7f00b9ab7000-7f00b9ab8000 ---p 0001c000 00:22 84233                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libswresample.so.4
+7f00b9ab8000-7f00b9aba000 r--p 0001c000 00:22 84233                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libswresample.so.4
+7f00b9aba000-7f00b9abb000 rw-p 0001e000 00:22 84233                      /home/nazk1/.javacpp/cache/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar/org/bytedeco/ffmpeg/linux-x86_64/libswresample.so.4
+7f00b9abb000-7f00b9af9000 r-xp 00000000 00:22 381152                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libsunec.so
+7f00b9af9000-7f00b9afe000 r--p 0003d000 00:22 381152                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libsunec.so
+7f00b9afe000-7f00b9b00000 rw-p 00042000 00:22 381152                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libsunec.so
+7f00b9b00000-7f00b9b04000 ---p 00000000 00:00 0 
+7f00b9b04000-7f00b9c00000 rw-p 00000000 00:00 0 
+7f00b9c00000-7f00b9e00000 rw-p 00000000 00:00 0 
+7f00b9e00000-7f00b9e04000 ---p 00000000 00:00 0 
+7f00b9e04000-7f00b9f00000 rw-p 00000000 00:00 0 
+7f00b9f00000-7f00b9f04000 ---p 00000000 00:00 0 
+7f00b9f04000-7f00ba000000 rw-p 00000000 00:00 0 
+7f00ba000000-7f00ba200000 rw-p 00000000 00:00 0 
+7f00ba200000-7f00ba400000 rw-p 00000000 00:00 0 
+7f00ba400000-7f00ba600000 rw-p 00000000 00:00 0 
+7f00ba600000-7f00ba604000 ---p 00000000 00:00 0 
+7f00ba604000-7f00ba700000 rw-p 00000000 00:00 0 
+7f00ba700000-7f00ba704000 ---p 00000000 00:00 0 
+7f00ba704000-7f00ba800000 rw-p 00000000 00:00 0 
+7f00ba800000-7f00baa00000 rw-p 00000000 00:00 0 
+7f00baa00000-7f00bac00000 rw-p 00000000 00:00 0 
+7f00bac00000-7f00bae00000 rw-p 00000000 00:00 0 
+7f00bae00000-7f00bae01000 r-xp 00000000 00:22 41028                      /usr/lib64/libxcb-shape.so.0.0.0
+7f00bae01000-7f00bae03000 r--p 00001000 00:22 41028                      /usr/lib64/libxcb-shape.so.0.0.0
+7f00bae03000-7f00bae04000 r--p 00002000 00:22 41028                      /usr/lib64/libxcb-shape.so.0.0.0
+7f00bae04000-7f00bae05000 rw-p 00003000 00:22 41028                      /usr/lib64/libxcb-shape.so.0.0.0
+7f00bae05000-7f00bae06000 r-xp 00000000 00:22 41029                      /usr/lib64/libxcb-shm.so.0.0.0
+7f00bae06000-7f00bae07000 r--p 00001000 00:22 41029                      /usr/lib64/libxcb-shm.so.0.0.0
+7f00bae07000-7f00bae08000 r--p 00002000 00:22 41029                      /usr/lib64/libxcb-shm.so.0.0.0
+7f00bae08000-7f00bae09000 rw-p 00003000 00:22 41029                      /usr/lib64/libxcb-shm.so.0.0.0
+7f00bae09000-7f00bae0d000 r--p 00000000 00:22 84218                      /home/nazk1/.javacpp/cache/javacpp-1.5.8-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjnijavacpp.so
+7f00bae0d000-7f00bae14000 r-xp 00004000 00:22 84218                      /home/nazk1/.javacpp/cache/javacpp-1.5.8-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjnijavacpp.so
+7f00bae14000-7f00bae18000 r--p 0000b000 00:22 84218                      /home/nazk1/.javacpp/cache/javacpp-1.5.8-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjnijavacpp.so
+7f00bae18000-7f00bae19000 r--p 0000e000 00:22 84218                      /home/nazk1/.javacpp/cache/javacpp-1.5.8-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjnijavacpp.so
+7f00bae19000-7f00bae1a000 rw-p 0000f000 00:22 84218                      /home/nazk1/.javacpp/cache/javacpp-1.5.8-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjnijavacpp.so
+7f00bae1a000-7f00bae20000 r--s 0003e000 00:22 381182                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/ext/sunjce_provider.jar
+7f00bae20000-7f00bae22000 r--s 00008000 00:22 381181                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/ext/sunec.jar
+7f00bae22000-7f00bae24000 r--s 00016000 00:22 381205                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/jce.jar
+7f00bae24000-7f00bae37000 r--s 0034c000 00:22 381224                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/resources.jar
+7f00bae37000-7f00bae3e000 r--s 00000000 00:22 333188                     /usr/lib64/gconv/gconv-modules.cache
+7f00bae3e000-7f00bae60000 r--p 00000000 00:22 219265                     /usr/share/locale/zh_CN/LC_MESSAGES/libc.mo
+7f00bae60000-7f00bae61000 ---p 00000000 00:00 0 
+7f00bae61000-7f00baf61000 rw-p 00000000 00:00 0 
+7f00baf61000-7f00baf65000 ---p 00000000 00:00 0 
+7f00baf65000-7f00bb061000 rw-p 00000000 00:00 0 
+7f00bb061000-7f00bb06b000 r--s 00117000 00:22 381178                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/ext/localedata.jar
+7f00bb06b000-7f00bb087000 r--s 00394000 00:22 381174                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/ext/cldrdata.jar
+7f00bb087000-7f00bb08b000 ---p 00000000 00:00 0 
+7f00bb08b000-7f00bb187000 rw-p 00000000 00:00 0 
+7f00bb187000-7f00bb18b000 ---p 00000000 00:00 0 
+7f00bb18b000-7f00bb287000 rw-p 00000000 00:00 0 
+7f00bb287000-7f00bb298000 r--s 001c7000 00:22 381211                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/jsse.jar
+7f00bb298000-7f00bb29d000 r--s 00012000 00:22 130322                     /home/nazk1/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar
+7f00bb29d000-7f00bb2b6000 r--s 001c9000 00:22 126329                     /home/nazk1/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar
+7f00bb2b6000-7f00bb2bb000 r--s 00043000 00:22 68552                      /home/nazk1/.m2/repository/org/springframework/spring-expression/5.3.31/spring-expression-5.3.31.jar
+7f00bb2bb000-7f00bb2d7000 r--s 0011c000 00:22 68551                      /home/nazk1/.m2/repository/org/springframework/spring-context/5.3.31/spring-context-5.3.31.jar
+7f00bb2d7000-7f00bb2e0000 r--s 00055000 00:22 68548                      /home/nazk1/.m2/repository/org/springframework/spring-aop/5.3.31/spring-aop-5.3.31.jar
+7f00bb2e0000-7f00bb2f3000 r--s 000e9000 00:22 68546                      /home/nazk1/.m2/repository/org/springframework/spring-webmvc/5.3.31/spring-webmvc-5.3.31.jar
+7f00bb2f3000-7f00bb300000 r--s 000a0000 00:22 68545                      /home/nazk1/.m2/repository/org/springframework/spring-beans/5.3.31/spring-beans-5.3.31.jar
+7f00bb300000-7f00bb31f000 r--s 00173000 00:22 68541                      /home/nazk1/.m2/repository/org/springframework/spring-web/5.3.31/spring-web-5.3.31.jar
+7f00bb31f000-7f00bb325000 r--s 00040000 00:22 68540                      /home/nazk1/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.83/tomcat-embed-websocket-9.0.83.jar
+7f00bb325000-7f00bb32a000 r--s 0003b000 00:22 68537                      /home/nazk1/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.83/tomcat-embed-el-9.0.83.jar
+7f00bb32a000-7f00bb354000 r--s 00338000 00:22 68536                      /home/nazk1/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.83/tomcat-embed-core-9.0.83.jar
+7f00bb354000-7f00bb355000 r--s 00001000 00:22 68535                      /home/nazk1/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.7.18/spring-boot-starter-tomcat-2.7.18.jar
+7f00bb355000-7f00bb357000 r--s 00001000 00:22 68531                      /home/nazk1/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.13.5/jackson-module-parameter-names-2.13.5.jar
+7f00bb357000-7f00bb359000 r--s 00007000 00:22 68529                      /home/nazk1/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.13.5/jackson-datatype-jdk8-2.13.5.jar
+7f00bb359000-7f00bb35a000 r--s 00001000 00:22 68520                      /home/nazk1/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.7.18/spring-boot-starter-json-2.7.18.jar
+7f00bb35a000-7f00bb35b000 r--s 00001000 00:22 68489                      /home/nazk1/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.7.18/spring-boot-starter-web-2.7.18.jar
+7f00bb35b000-7f00bb35d000 r--s 001a6000 00:22 68486                      /home/nazk1/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/tesseract-5.2.0-1.5.8-windows-x86_64.jar
+7f00bb35d000-7f00bb35f000 r--s 001ab000 00:22 68485                      /home/nazk1/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/tesseract-5.2.0-1.5.8-windows-x86.jar
+7f00bb35f000-7f00bb361000 r--s 00181000 00:22 68484                      /home/nazk1/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/tesseract-5.2.0-1.5.8-macosx-x86_64.jar
+7f00bb361000-7f00bb363000 r--s 00169000 00:22 68480                      /home/nazk1/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/tesseract-5.2.0-1.5.8-macosx-arm64.jar
+7f00bb363000-7f00bb365000 r--s 00203000 00:22 68479                      /home/nazk1/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/tesseract-5.2.0-1.5.8-linux-ppc64le.jar
+7f00bb365000-7f00bb366000 r--s 001bd000 00:22 68476                      /home/nazk1/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/tesseract-5.2.0-1.5.8-linux-arm64.jar
+7f00bb366000-7f00bb367000 r--s 00176000 00:22 68474                      /home/nazk1/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/tesseract-5.2.0-1.5.8-linux-armhf.jar
+7f00bb367000-7f00bb368000 r--s 001b1000 00:22 68473                      /home/nazk1/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/tesseract-5.2.0-1.5.8-linux-x86_64.jar
+7f00bb368000-7f00bb369000 r--s 001c5000 00:22 68469                      /home/nazk1/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/tesseract-5.2.0-1.5.8-linux-x86.jar
+7f00bb369000-7f00bb36a000 r--s 001c9000 00:22 68468                      /home/nazk1/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/tesseract-5.2.0-1.5.8-android-x86_64.jar
+7f00bb36a000-7f00bb36c000 r--s 001d0000 00:22 68466                      /home/nazk1/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/tesseract-5.2.0-1.5.8-android-x86.jar
+7f00bb36c000-7f00bb36e000 r--s 0019f000 00:22 68462                      /home/nazk1/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/tesseract-5.2.0-1.5.8-android-arm64.jar
+7f00bb36e000-7f00bb370000 r--s 00140000 00:22 68460                      /home/nazk1/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/tesseract-5.2.0-1.5.8-android-arm.jar
+7f00bb370000-7f00bb371000 r--s 00000000 00:22 68459                      /home/nazk1/.m2/repository/org/bytedeco/tesseract-platform/5.2.0-1.5.8/tesseract-platform-5.2.0-1.5.8.jar
+7f00bb371000-7f00bb377000 r--s 00468000 00:22 68456                      /home/nazk1/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/leptonica-1.82.0-1.5.8-windows-x86_64.jar
+7f00bb377000-7f00bb37d000 r--s 0046a000 00:22 68454                      /home/nazk1/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/leptonica-1.82.0-1.5.8-windows-x86.jar
+7f00bb37d000-7f00bb381000 r--s 00361000 00:22 68452                      /home/nazk1/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/leptonica-1.82.0-1.5.8-macosx-x86_64.jar
+7f00bb381000-7f00bb385000 r--s 002fe000 00:22 68451                      /home/nazk1/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/leptonica-1.82.0-1.5.8-macosx-arm64.jar
+7f00bb385000-7f00bb38a000 r--s 003e4000 00:22 68447                      /home/nazk1/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/leptonica-1.82.0-1.5.8-linux-ppc64le.jar
+7f00bb38a000-7f00bb38f000 r--s 00375000 00:22 68445                      /home/nazk1/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/leptonica-1.82.0-1.5.8-linux-arm64.jar
+7f00bb38f000-7f00bb393000 r--s 00309000 00:22 68443                      /home/nazk1/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/leptonica-1.82.0-1.5.8-linux-armhf.jar
+7f00bb393000-7f00bb397000 r--s 0039e000 00:22 68441                      /home/nazk1/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/leptonica-1.82.0-1.5.8-linux-x86_64.jar
+7f00bb397000-7f00bb39c000 r--s 003bf000 00:22 68439                      /home/nazk1/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/leptonica-1.82.0-1.5.8-linux-x86.jar
+7f00bb39c000-7f00bb3a0000 r--s 0035f000 00:22 68436                      /home/nazk1/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/leptonica-1.82.0-1.5.8-android-x86_64.jar
+7f00bb3a0000-7f00bb3a3000 r--s 0035d000 00:22 68434                      /home/nazk1/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/leptonica-1.82.0-1.5.8-android-x86.jar
+7f00bb3a3000-7f00bb3a7000 r--s 002f7000 00:22 68433                      /home/nazk1/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/leptonica-1.82.0-1.5.8-android-arm64.jar
+7f00bb3a7000-7f00bb3ab000 r--s 0028b000 00:22 68430                      /home/nazk1/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/leptonica-1.82.0-1.5.8-android-arm.jar
+7f00bb3ab000-7f00bb3ac000 r--s 00000000 00:22 68429                      /home/nazk1/.m2/repository/org/bytedeco/leptonica-platform/1.82.0-1.5.8/leptonica-platform-1.82.0-1.5.8.jar
+7f00bb3ac000-7f00bb3ad000 r--s 0000b000 00:22 68428                      /home/nazk1/.m2/repository/org/bytedeco/flandmark/1.07-1.5.8/flandmark-1.07-1.5.8-windows-x86_64.jar
+7f00bb3ad000-7f00bb3af000 r--s 00009000 00:22 68424                      /home/nazk1/.m2/repository/org/bytedeco/flandmark/1.07-1.5.8/flandmark-1.07-1.5.8-windows-x86.jar
+7f00bb3af000-7f00bb3b0000 r--s 0000d000 00:22 68423                      /home/nazk1/.m2/repository/org/bytedeco/flandmark/1.07-1.5.8/flandmark-1.07-1.5.8-macosx-x86_64.jar
+7f00bb3b0000-7f00bb3b1000 r--s 0000e000 00:22 68422                      /home/nazk1/.m2/repository/org/bytedeco/flandmark/1.07-1.5.8/flandmark-1.07-1.5.8-linux-ppc64le.jar
+7f00bb3b1000-7f00bb3b3000 r--s 0000c000 00:22 68418                      /home/nazk1/.m2/repository/org/bytedeco/flandmark/1.07-1.5.8/flandmark-1.07-1.5.8-linux-arm64.jar
+7f00bb3b3000-7f00bb3b4000 r--s 0000a000 00:22 68417                      /home/nazk1/.m2/repository/org/bytedeco/flandmark/1.07-1.5.8/flandmark-1.07-1.5.8-linux-armhf.jar
+7f00bb3b4000-7f00bb3b6000 r--s 0000c000 00:22 68416                      /home/nazk1/.m2/repository/org/bytedeco/flandmark/1.07-1.5.8/flandmark-1.07-1.5.8-linux-x86_64.jar
+7f00bb3b6000-7f00bb3b7000 r--s 0000e000 00:22 68412                      /home/nazk1/.m2/repository/org/bytedeco/flandmark/1.07-1.5.8/flandmark-1.07-1.5.8-linux-x86.jar
+7f00bb3b7000-7f00bb3b8000 r--s 00010000 00:22 68411                      /home/nazk1/.m2/repository/org/bytedeco/flandmark/1.07-1.5.8/flandmark-1.07-1.5.8-android-x86_64.jar
+7f00bb3b8000-7f00bb3ba000 r--s 0000f000 00:22 68410                      /home/nazk1/.m2/repository/org/bytedeco/flandmark/1.07-1.5.8/flandmark-1.07-1.5.8-android-x86.jar
+7f00bb3ba000-7f00bb3bb000 r--s 0000e000 00:22 68405                      /home/nazk1/.m2/repository/org/bytedeco/flandmark/1.07-1.5.8/flandmark-1.07-1.5.8-android-arm64.jar
+7f00bb3bb000-7f00bb3bd000 r--s 0000a000 00:22 68406                      /home/nazk1/.m2/repository/org/bytedeco/flandmark/1.07-1.5.8/flandmark-1.07-1.5.8-android-arm.jar
+7f00bb3bd000-7f00bb3be000 r--s 00000000 00:22 68404                      /home/nazk1/.m2/repository/org/bytedeco/flandmark-platform/1.07-1.5.8/flandmark-platform-1.07-1.5.8.jar
+7f00bb3be000-7f00bb3c0000 r--s 00025000 00:22 68400                      /home/nazk1/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5.8/artoolkitplus-2.3.1-1.5.8-windows-x86_64.jar
+7f00bb3c0000-7f00bb3c1000 r--s 00020000 00:22 68399                      /home/nazk1/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5.8/artoolkitplus-2.3.1-1.5.8-windows-x86.jar
+7f00bb3c1000-7f00bb3c2000 r--s 0002f000 00:22 68398                      /home/nazk1/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5.8/artoolkitplus-2.3.1-1.5.8-macosx-x86_64.jar
+7f00bb3c2000-7f00bb3c3000 r--s 00034000 00:22 68394                      /home/nazk1/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5.8/artoolkitplus-2.3.1-1.5.8-linux-ppc64le.jar
+7f00bb3c3000-7f00bb3c5000 r--s 0002d000 00:22 68393                      /home/nazk1/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5.8/artoolkitplus-2.3.1-1.5.8-linux-arm64.jar
+7f00bb3c5000-7f00bb3c7000 r--s 00023000 00:22 68392                      /home/nazk1/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5.8/artoolkitplus-2.3.1-1.5.8-linux-armhf.jar
+7f00bb3c7000-7f00bb3c9000 r--s 00032000 00:22 68388                      /home/nazk1/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5.8/artoolkitplus-2.3.1-1.5.8-linux-x86_64.jar
+7f00bb3c9000-7f00bb3cb000 r--s 00034000 00:22 68387                      /home/nazk1/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5.8/artoolkitplus-2.3.1-1.5.8-linux-x86.jar
+7f00bb3cb000-7f00bb3cd000 r--s 00072000 00:22 68385                      /home/nazk1/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5.8/artoolkitplus-2.3.1-1.5.8-android-x86_64.jar
+7f00bb3cd000-7f00bb3cf000 r--s 00071000 00:22 68383                      /home/nazk1/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5.8/artoolkitplus-2.3.1-1.5.8-android-x86.jar
+7f00bb3cf000-7f00bb3d1000 r--s 00061000 00:22 68379                      /home/nazk1/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5.8/artoolkitplus-2.3.1-1.5.8-android-arm64.jar
+7f00bb3d1000-7f00bb3d3000 r--s 00051000 00:22 68378                      /home/nazk1/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5.8/artoolkitplus-2.3.1-1.5.8-android-arm.jar
+7f00bb3d3000-7f00bb3d4000 r--s 00000000 00:22 68375                      /home/nazk1/.m2/repository/org/bytedeco/artoolkitplus-platform/2.3.1-1.5.8/artoolkitplus-platform-2.3.1-1.5.8.jar
+7f00bb3d4000-7f00bb3d6000 r--s 00020000 00:22 68374                      /home/nazk1/.m2/repository/org/bytedeco/videoinput/0.200-1.5.8/videoinput-0.200-1.5.8-windows-x86_64.jar
+7f00bb3d6000-7f00bb3d8000 r--s 0001b000 00:22 68371                      /home/nazk1/.m2/repository/org/bytedeco/videoinput/0.200-1.5.8/videoinput-0.200-1.5.8-windows-x86.jar
+7f00bb3d8000-7f00bb3d9000 r--s 00000000 00:22 68370                      /home/nazk1/.m2/repository/org/bytedeco/videoinput-platform/0.200-1.5.8/videoinput-platform-0.200-1.5.8.jar
+7f00bb3d9000-7f00bb3db000 r--s 00936000 00:22 68367                      /home/nazk1/.m2/repository/org/bytedeco/librealsense2/2.50.0-1.5.8/librealsense2-2.50.0-1.5.8-windows-x86_64.jar
+7f00bb3db000-7f00bb3dc000 r--s 008dc000 00:22 68365                      /home/nazk1/.m2/repository/org/bytedeco/librealsense2/2.50.0-1.5.8/librealsense2-2.50.0-1.5.8-windows-x86.jar
+7f00bb3dc000-7f00bb3de000 r--s 008e0000 00:22 68363                      /home/nazk1/.m2/repository/org/bytedeco/librealsense2/2.50.0-1.5.8/librealsense2-2.50.0-1.5.8-macosx-x86_64.jar
+7f00bb3de000-7f00bb3df000 r--s 00903000 00:22 68360                      /home/nazk1/.m2/repository/org/bytedeco/librealsense2/2.50.0-1.5.8/librealsense2-2.50.0-1.5.8-linux-x86_64.jar
+7f00bb3df000-7f00bb3e0000 r--s 00917000 00:22 68358                      /home/nazk1/.m2/repository/org/bytedeco/librealsense2/2.50.0-1.5.8/librealsense2-2.50.0-1.5.8-linux-x86.jar
+7f00bb3e0000-7f00bb3e2000 r--s 0089e000 00:22 68356                      /home/nazk1/.m2/repository/org/bytedeco/librealsense2/2.50.0-1.5.8/librealsense2-2.50.0-1.5.8-linux-arm64.jar
+7f00bb3e2000-7f00bb3e3000 r--s 0082d000 00:22 68355                      /home/nazk1/.m2/repository/org/bytedeco/librealsense2/2.50.0-1.5.8/librealsense2-2.50.0-1.5.8-linux-armhf.jar
+7f00bb3e3000-7f00bb3e4000 r--s 00000000 00:22 68354                      /home/nazk1/.m2/repository/org/bytedeco/librealsense2-platform/2.50.0-1.5.8/librealsense2-platform-2.50.0-1.5.8.jar
+7f00bb3e4000-7f00bb3e6000 r--s 00050000 00:22 68350                      /home/nazk1/.m2/repository/org/bytedeco/librealsense/1.12.4-1.5.8/librealsense-1.12.4-1.5.8-windows-x86_64.jar
+7f00bb3e6000-7f00bb3e8000 r--s 00049000 00:22 68349                      /home/nazk1/.m2/repository/org/bytedeco/librealsense/1.12.4-1.5.8/librealsense-1.12.4-1.5.8-windows-x86.jar
+7f00bb3e8000-7f00bb3ea000 r--s 00071000 00:22 68346                      /home/nazk1/.m2/repository/org/bytedeco/librealsense/1.12.4-1.5.8/librealsense-1.12.4-1.5.8-macosx-x86_64.jar
+7f00bb3ea000-7f00bb3ec000 r--s 00089000 00:22 68345                      /home/nazk1/.m2/repository/org/bytedeco/librealsense/1.12.4-1.5.8/librealsense-1.12.4-1.5.8-linux-x86_64.jar
+7f00bb3ec000-7f00bb3ee000 r--s 00090000 00:22 68343                      /home/nazk1/.m2/repository/org/bytedeco/librealsense/1.12.4-1.5.8/librealsense-1.12.4-1.5.8-linux-x86.jar
+7f00bb3ee000-7f00bb3ef000 r--s 0007d000 00:22 68340                      /home/nazk1/.m2/repository/org/bytedeco/librealsense/1.12.4-1.5.8/librealsense-1.12.4-1.5.8-linux-arm64.jar
+7f00bb3ef000-7f00bb3f0000 r--s 0006f000 00:22 68338                      /home/nazk1/.m2/repository/org/bytedeco/librealsense/1.12.4-1.5.8/librealsense-1.12.4-1.5.8-linux-armhf.jar
+7f00bb3f0000-7f00bb3f1000 r--s 00000000 00:22 68339                      /home/nazk1/.m2/repository/org/bytedeco/librealsense-platform/1.12.4-1.5.8/librealsense-platform-1.12.4-1.5.8.jar
+7f00bb3f1000-7f00bb3f3000 r--s 00069000 00:22 68335                      /home/nazk1/.m2/repository/org/bytedeco/libfreenect2/0.2.0-1.5.8/libfreenect2-0.2.0-1.5.8-windows-x86_64.jar
+7f00bb3f3000-7f00bb3f4000 r--s 00064000 00:22 68332                      /home/nazk1/.m2/repository/org/bytedeco/libfreenect2/0.2.0-1.5.8/libfreenect2-0.2.0-1.5.8-macosx-x86_64.jar
+7f00bb3f4000-7f00bb3f6000 r--s 0009d000 00:22 68330                      /home/nazk1/.m2/repository/org/bytedeco/libfreenect2/0.2.0-1.5.8/libfreenect2-0.2.0-1.5.8-linux-x86_64.jar
+7f00bb3f6000-7f00bb3f7000 r--s 000a6000 00:22 68329                      /home/nazk1/.m2/repository/org/bytedeco/libfreenect2/0.2.0-1.5.8/libfreenect2-0.2.0-1.5.8-linux-x86.jar
+7f00bb3f7000-7f00bb3f8000 r--s 00000000 00:22 68328                      /home/nazk1/.m2/repository/org/bytedeco/libfreenect2-platform/0.2.0-1.5.8/libfreenect2-platform-0.2.0-1.5.8.jar
+7f00bb3f8000-7f00bb3f9000 r--s 0004c000 00:22 68324                      /home/nazk1/.m2/repository/org/bytedeco/libfreenect/0.5.7-1.5.8/libfreenect-0.5.7-1.5.8-windows-x86_64.jar
+7f00bb3f9000-7f00bb3fb000 r--s 0003e000 00:22 68323                      /home/nazk1/.m2/repository/org/bytedeco/libfreenect/0.5.7-1.5.8/libfreenect-0.5.7-1.5.8-windows-x86.jar
+7f00bb3fb000-7f00bb3fd000 r--s 0001e000 00:22 68322                      /home/nazk1/.m2/repository/org/bytedeco/libfreenect/0.5.7-1.5.8/libfreenect-0.5.7-1.5.8-macosx-x86_64.jar
+7f00bb3fd000-7f00bb3ff000 r--s 0003e000 00:22 68318                      /home/nazk1/.m2/repository/org/bytedeco/libfreenect/0.5.7-1.5.8/libfreenect-0.5.7-1.5.8-linux-ppc64le.jar
+7f00bb3ff000-7f00bb401000 r--s 0001e000 00:22 68317                      /home/nazk1/.m2/repository/org/bytedeco/libfreenect/0.5.7-1.5.8/libfreenect-0.5.7-1.5.8-linux-arm64.jar
+7f00bb401000-7f00bb403000 r--s 00036000 00:22 68316                      /home/nazk1/.m2/repository/org/bytedeco/libfreenect/0.5.7-1.5.8/libfreenect-0.5.7-1.5.8-linux-armhf.jar
+7f00bb403000-7f00bb405000 r--s 0003f000 00:22 68312                      /home/nazk1/.m2/repository/org/bytedeco/libfreenect/0.5.7-1.5.8/libfreenect-0.5.7-1.5.8-linux-x86_64.jar
+7f00bb405000-7f00bb406000 r--s 0003e000 00:22 68311                      /home/nazk1/.m2/repository/org/bytedeco/libfreenect/0.5.7-1.5.8/libfreenect-0.5.7-1.5.8-linux-x86.jar
+7f00bb406000-7f00bb407000 r--s 00000000 00:22 68310                      /home/nazk1/.m2/repository/org/bytedeco/libfreenect-platform/0.5.7-1.5.8/libfreenect-platform-0.5.7-1.5.8.jar
+7f00bb407000-7f00bb409000 r--s 00058000 00:22 68305                      /home/nazk1/.m2/repository/org/bytedeco/libdc1394/2.2.6-1.5.8/libdc1394-2.2.6-1.5.8-windows-x86_64.jar
+7f00bb409000-7f00bb40b000 r--s 0004e000 00:22 68306                      /home/nazk1/.m2/repository/org/bytedeco/libdc1394/2.2.6-1.5.8/libdc1394-2.2.6-1.5.8-windows-x86.jar
+7f00bb40b000-7f00bb40d000 r--s 00033000 00:22 68304                      /home/nazk1/.m2/repository/org/bytedeco/libdc1394/2.2.6-1.5.8/libdc1394-2.2.6-1.5.8-macosx-x86_64.jar
+7f00bb40d000-7f00bb40e000 r--s 0002b000 00:22 68299                      /home/nazk1/.m2/repository/org/bytedeco/libdc1394/2.2.6-1.5.8/libdc1394-2.2.6-1.5.8-linux-ppc64le.jar
+7f00bb40e000-7f00bb40f000 r--s 00027000 00:22 68300                      /home/nazk1/.m2/repository/org/bytedeco/libdc1394/2.2.6-1.5.8/libdc1394-2.2.6-1.5.8-linux-arm64.jar
+7f00bb40f000-7f00bb411000 r--s 00023000 00:22 68295                      /home/nazk1/.m2/repository/org/bytedeco/libdc1394/2.2.6-1.5.8/libdc1394-2.2.6-1.5.8-linux-armhf.jar
+7f00bb411000-7f00bb413000 r--s 00029000 00:22 68294                      /home/nazk1/.m2/repository/org/bytedeco/libdc1394/2.2.6-1.5.8/libdc1394-2.2.6-1.5.8-linux-x86_64.jar
+7f00bb413000-7f00bb415000 r--s 0002a000 00:22 68291                      /home/nazk1/.m2/repository/org/bytedeco/libdc1394/2.2.6-1.5.8/libdc1394-2.2.6-1.5.8-linux-x86.jar
+7f00bb415000-7f00bb416000 r--s 00000000 00:22 68290                      /home/nazk1/.m2/repository/org/bytedeco/libdc1394-platform/2.2.6-1.5.8/libdc1394-platform-2.2.6-1.5.8.jar
+7f00bb416000-7f00bb418000 r--s 00030000 00:22 68287                      /home/nazk1/.m2/repository/org/bytedeco/flycapture/2.13.3.31-1.5.8/flycapture-2.13.3.31-1.5.8-windows-x86_64.jar
+7f00bb418000-7f00bb41a000 r--s 0002b000 00:22 68286                      /home/nazk1/.m2/repository/org/bytedeco/flycapture/2.13.3.31-1.5.8/flycapture-2.13.3.31-1.5.8-windows-x86.jar
+7f00bb41a000-7f00bb41c000 r--s 00046000 00:22 68282                      /home/nazk1/.m2/repository/org/bytedeco/flycapture/2.13.3.31-1.5.8/flycapture-2.13.3.31-1.5.8-linux-arm64.jar
+7f00bb41c000-7f00bb41d000 r--s 00039000 00:22 68283                      /home/nazk1/.m2/repository/org/bytedeco/flycapture/2.13.3.31-1.5.8/flycapture-2.13.3.31-1.5.8-linux-armhf.jar
+7f00bb41d000-7f00bb41f000 r--s 0004c000 00:22 68279                      /home/nazk1/.m2/repository/org/bytedeco/flycapture/2.13.3.31-1.5.8/flycapture-2.13.3.31-1.5.8-linux-x86_64.jar
+7f00bb41f000-7f00bb421000 r--s 0004e000 00:22 68278                      /home/nazk1/.m2/repository/org/bytedeco/flycapture/2.13.3.31-1.5.8/flycapture-2.13.3.31-1.5.8-linux-x86.jar
+7f00bb421000-7f00bb422000 r--s 00000000 00:22 68275                      /home/nazk1/.m2/repository/org/bytedeco/flycapture-platform/2.13.3.31-1.5.8/flycapture-platform-2.13.3.31-1.5.8.jar
+7f00bb422000-7f00bb425000 r--s 00fa4000 00:22 68273                      /home/nazk1/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/ffmpeg-5.1.2-1.5.8-windows-x86_64.jar
+7f00bb425000-7f00bb428000 r--s 00f99000 00:22 68272                      /home/nazk1/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/ffmpeg-5.1.2-1.5.8-windows-x86.jar
+7f00bb428000-7f00bb42a000 r--s 00ef9000 00:22 68268                      /home/nazk1/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/ffmpeg-5.1.2-1.5.8-macosx-x86_64.jar
+7f00bb42a000-7f00bb42c000 r--s 00d32000 00:22 68266                      /home/nazk1/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/ffmpeg-5.1.2-1.5.8-macosx-arm64.jar
+7f00bb42c000-7f00bb42e000 r--s 0104e000 00:22 68262                      /home/nazk1/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/ffmpeg-5.1.2-1.5.8-linux-ppc64le.jar
+7f00bb42e000-7f00bb431000 r--s 00e75000 00:22 68261                      /home/nazk1/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/ffmpeg-5.1.2-1.5.8-linux-arm64.jar
+7f00bb431000-7f00bb434000 r--s 00d99000 00:22 68258                      /home/nazk1/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/ffmpeg-5.1.2-1.5.8-linux-armhf.jar
+7f00bb434000-7f00bb437000 r--s 00f58000 00:22 68256                      /home/nazk1/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/ffmpeg-5.1.2-1.5.8-linux-x86_64.jar
+7f00bb437000-7f00bb43a000 r--s 00f7c000 00:22 68254                      /home/nazk1/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/ffmpeg-5.1.2-1.5.8-linux-x86.jar
+7f00bb43a000-7f00bb43c000 r--s 00ff3000 00:22 68251                      /home/nazk1/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/ffmpeg-5.1.2-1.5.8-android-x86_64.jar
+7f00bb43c000-7f00bb43e000 r--s 01029000 00:22 68249                      /home/nazk1/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/ffmpeg-5.1.2-1.5.8-android-x86.jar
+7f00bb43e000-7f00bb441000 r--s 00e85000 00:22 68247                      /home/nazk1/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/ffmpeg-5.1.2-1.5.8-android-arm64.jar
+7f00bb441000-7f00bb444000 r--s 00dcc000 00:22 68245                      /home/nazk1/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/ffmpeg-5.1.2-1.5.8-android-arm.jar
+7f00bb444000-7f00bb445000 r--s 00000000 00:22 68243                      /home/nazk1/.m2/repository/org/bytedeco/ffmpeg-platform/5.1.2-1.5.8/ffmpeg-platform-5.1.2-1.5.8.jar
+7f00bb445000-7f00bb463000 r--s 01d41000 00:22 68240                      /home/nazk1/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/opencv-4.6.0-1.5.8-windows-x86_64.jar
+7f00bb463000-7f00bb481000 r--s 01b61000 00:22 68238                      /home/nazk1/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/opencv-4.6.0-1.5.8-windows-x86.jar
+7f00bb481000-7f00bb4a8000 r--s 01887000 00:22 68236                      /home/nazk1/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/opencv-4.6.0-1.5.8-macosx-x86_64.jar
+7f00bb4a8000-7f00bb4ce000 r--s 01451000 00:22 68197                      /home/nazk1/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/opencv-4.6.0-1.5.8-macosx-arm64.jar
+7f00bb4ce000-7f00bb4f5000 r--s 01a9c000 00:22 68162                      /home/nazk1/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/opencv-4.6.0-1.5.8-linux-ppc64le.jar
+7f00bb4f5000-7f00bb51b000 r--s 01846000 00:22 68159                      /home/nazk1/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/opencv-4.6.0-1.5.8-linux-arm64.jar
+7f00bb51b000-7f00bb542000 r--s 0157b000 00:22 68157                      /home/nazk1/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/opencv-4.6.0-1.5.8-linux-armhf.jar
+7f00bb542000-7f00bb569000 r--s 01ace000 00:22 68154                      /home/nazk1/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/opencv-4.6.0-1.5.8-linux-x86_64.jar
+7f00bb569000-7f00bb58f000 r--s 01b93000 00:22 68152                      /home/nazk1/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/opencv-4.6.0-1.5.8-linux-x86.jar
+7f00bb58f000-7f00bb5b4000 r--s 01bde000 00:22 67860                      /home/nazk1/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/opencv-4.6.0-1.5.8-ios-x86_64.jar
+7f00bb5b4000-7f00bb5d9000 r--s 01961000 00:22 68146                      /home/nazk1/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/opencv-4.6.0-1.5.8-ios-arm64.jar
+7f00bb5d9000-7f00bb5ee000 r--s 016df000 00:22 68144                      /home/nazk1/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/opencv-4.6.0-1.5.8-android-x86_64.jar
+7f00bb5ee000-7f00bb603000 r--s 0163f000 00:22 68142                      /home/nazk1/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/opencv-4.6.0-1.5.8-android-x86.jar
+7f00bb603000-7f00bb619000 r--s 013de000 00:22 66884                      /home/nazk1/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/opencv-4.6.0-1.5.8-android-arm64.jar
+7f00bb619000-7f00bb62f000 r--s 010e5000 00:22 68138                      /home/nazk1/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/opencv-4.6.0-1.5.8-android-arm.jar
+7f00bb62f000-7f00bb630000 r--s 00000000 00:22 84312                      /home/nazk1/.m2/repository/org/bytedeco/opencv-platform/4.6.0-1.5.8/opencv-platform-4.6.0-1.5.8.jar
+7f00bb630000-7f00bb633000 r--s 01b62000 00:22 68133                      /home/nazk1/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/openblas-0.3.21-1.5.8-windows-x86_64.jar
+7f00bb633000-7f00bb636000 r--s 0181a000 00:22 84264                      /home/nazk1/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/openblas-0.3.21-1.5.8-windows-x86.jar
+7f00bb636000-7f00bb638000 r--s 00e76000 00:22 84261                      /home/nazk1/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/openblas-0.3.21-1.5.8-macosx-x86_64.jar
+7f00bb638000-7f00bb63a000 r--s 00734000 00:22 66213                      /home/nazk1/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/openblas-0.3.21-1.5.8-macosx-arm64.jar
+7f00bb63a000-7f00bb63d000 r--s 00916000 00:22 84258                      /home/nazk1/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/openblas-0.3.21-1.5.8-linux-ppc64le.jar
+7f00bb63d000-7f00bb63f000 r--s 0080c000 00:22 84259                      /home/nazk1/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/openblas-0.3.21-1.5.8-linux-arm64.jar
+7f00bb63f000-7f00bb641000 r--s 00743000 00:22 84262                      /home/nazk1/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/openblas-0.3.21-1.5.8-linux-armhf.jar
+7f00bb641000-7f00bb644000 r--s 00d80000 00:22 62344                      /home/nazk1/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/openblas-0.3.21-1.5.8-linux-x86_64.jar
+7f00bb644000-7f00bb646000 r--s 00abd000 00:22 61591                      /home/nazk1/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/openblas-0.3.21-1.5.8-linux-x86.jar
+7f00bb646000-7f00bb648000 r--s 008fe000 00:22 61477                      /home/nazk1/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/openblas-0.3.21-1.5.8-ios-x86_64.jar
+7f00bb648000-7f00bb64a000 r--s 008e2000 00:22 61483                      /home/nazk1/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/openblas-0.3.21-1.5.8-ios-arm64.jar
+7f00bb64a000-7f00bb64c000 r--s 00a26000 00:22 61475                      /home/nazk1/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/openblas-0.3.21-1.5.8-android-x86_64.jar
+7f00bb64c000-7f00bb64e000 r--s 008bc000 00:22 61474                      /home/nazk1/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/openblas-0.3.21-1.5.8-android-x86.jar
+7f00bb64e000-7f00bb650000 r--s 007e7000 00:22 61476                      /home/nazk1/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/openblas-0.3.21-1.5.8-android-arm64.jar
+7f00bb650000-7f00bb652000 r--s 0079b000 00:22 68129                      /home/nazk1/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/openblas-0.3.21-1.5.8-android-arm.jar
+7f00bb652000-7f00bb656000 r--s 00153000 00:22 53562                      /home/nazk1/.m2/repository/org/bytedeco/javacpp/1.5.8/javacpp-1.5.8-windows-x86_64.jar
+7f00bb656000-7f00bb659000 r--s 0013d000 00:22 53559                      /home/nazk1/.m2/repository/org/bytedeco/javacpp/1.5.8/javacpp-1.5.8-windows-x86.jar
+7f00bb659000-7f00bb65b000 r--s 00004000 00:22 53560                      /home/nazk1/.m2/repository/org/bytedeco/javacpp/1.5.8/javacpp-1.5.8-macosx-x86_64.jar
+7f00bb65b000-7f00bb65d000 r--s 00004000 00:22 53556                      /home/nazk1/.m2/repository/org/bytedeco/javacpp/1.5.8/javacpp-1.5.8-macosx-arm64.jar
+7f00bb65d000-7f00bb65e000 r--s 00006000 00:22 53555                      /home/nazk1/.m2/repository/org/bytedeco/javacpp/1.5.8/javacpp-1.5.8-linux-x86_64.jar
+7f00bb65e000-7f00bb65f000 r--s 00006000 00:22 53552                      /home/nazk1/.m2/repository/org/bytedeco/javacpp/1.5.8/javacpp-1.5.8-linux-x86.jar
+7f00bb65f000-7f00bb660000 r--s 00006000 00:22 53551                      /home/nazk1/.m2/repository/org/bytedeco/javacpp/1.5.8/javacpp-1.5.8-linux-ppc64le.jar
+7f00bb660000-7f00bb662000 r--s 00005000 00:22 53548                      /home/nazk1/.m2/repository/org/bytedeco/javacpp/1.5.8/javacpp-1.5.8-linux-arm64.jar
+7f00bb662000-7f00bb663000 r--s 00005000 00:22 53545                      /home/nazk1/.m2/repository/org/bytedeco/javacpp/1.5.8/javacpp-1.5.8-linux-armhf.jar
+7f00bb663000-7f00bb665000 r--s 00004000 00:22 53543                      /home/nazk1/.m2/repository/org/bytedeco/javacpp/1.5.8/javacpp-1.5.8-ios-x86_64.jar
+7f00bb665000-7f00bb666000 r--s 00005000 00:22 53540                      /home/nazk1/.m2/repository/org/bytedeco/javacpp/1.5.8/javacpp-1.5.8-ios-arm64.jar
+7f00bb666000-7f00bb667000 r--s 00017000 00:22 53538                      /home/nazk1/.m2/repository/org/bytedeco/javacpp/1.5.8/javacpp-1.5.8-android-x86_64.jar
+7f00bb667000-7f00bb668000 r--s 00017000 00:22 53536                      /home/nazk1/.m2/repository/org/bytedeco/javacpp/1.5.8/javacpp-1.5.8-android-x86.jar
+7f00bb668000-7f00bb669000 r--s 00015000 00:22 53534                      /home/nazk1/.m2/repository/org/bytedeco/javacpp/1.5.8/javacpp-1.5.8-android-arm64.jar
+7f00bb669000-7f00bb66b000 r--s 0000f000 00:22 53532                      /home/nazk1/.m2/repository/org/bytedeco/javacpp/1.5.8/javacpp-1.5.8-android-arm.jar
+7f00bb66b000-7f00bb66c000 r--s 00001000 00:22 53530                      /home/nazk1/.m2/repository/org/bytedeco/javacpp-platform/1.5.8/javacpp-platform-1.5.8.jar
+7f00bb66c000-7f00bb66d000 r--s 00000000 00:22 53528                      /home/nazk1/.m2/repository/org/bytedeco/openblas-platform/0.3.21-1.5.8/openblas-platform-0.3.21-1.5.8.jar
+7f00bb66d000-7f00bb670000 r--s 0000c000 00:22 53526                      /home/nazk1/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/tesseract-5.2.0-1.5.8.jar
+7f00bb670000-7f00bb673000 r--s 00026000 00:22 53524                      /home/nazk1/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/leptonica-1.82.0-1.5.8.jar
+7f00bb673000-7f00bb675000 r--s 00002000 00:22 53522                      /home/nazk1/.m2/repository/org/bytedeco/flandmark/1.07-1.5.8/flandmark-1.07-1.5.8.jar
+7f00bb675000-7f00bb677000 r--s 00005000 00:22 53520                      /home/nazk1/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5.8/artoolkitplus-2.3.1-1.5.8.jar
+7f00bb677000-7f00bb679000 r--s 00003000 00:22 53518                      /home/nazk1/.m2/repository/org/bytedeco/videoinput/0.200-1.5.8/videoinput-0.200-1.5.8.jar
+7f00bb679000-7f00bb67d000 r--s 0000e000 00:22 53516                      /home/nazk1/.m2/repository/org/bytedeco/librealsense2/2.50.0-1.5.8/librealsense2-2.50.0-1.5.8.jar
+7f00bb67d000-7f00bb680000 r--s 0000a000 00:22 53514                      /home/nazk1/.m2/repository/org/bytedeco/librealsense/1.12.4-1.5.8/librealsense-1.12.4-1.5.8.jar
+7f00bb680000-7f00bb681000 r--s 00005000 00:22 53512                      /home/nazk1/.m2/repository/org/bytedeco/libfreenect2/0.2.0-1.5.8/libfreenect2-0.2.0-1.5.8.jar
+7f00bb681000-7f00bb683000 r--s 00004000 00:22 53510                      /home/nazk1/.m2/repository/org/bytedeco/libfreenect/0.5.7-1.5.8/libfreenect-0.5.7-1.5.8.jar
+7f00bb683000-7f00bb686000 r--s 00006000 00:22 53507                      /home/nazk1/.m2/repository/org/bytedeco/libdc1394/2.2.6-1.5.8/libdc1394-2.2.6-1.5.8.jar
+7f00bb686000-7f00bb68b000 r--s 0001d000 00:22 53505                      /home/nazk1/.m2/repository/org/bytedeco/flycapture/2.13.3.31-1.5.8/flycapture-2.13.3.31-1.5.8.jar
+7f00bb68b000-7f00bb695000 r--s 0003f000 00:22 53499                      /home/nazk1/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/ffmpeg-5.1.2-1.5.8.jar
+7f00bb695000-7f00bb6c4000 r--s 00180000 00:22 53500                      /home/nazk1/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/opencv-4.6.0-1.5.8.jar
+7f00bb6c4000-7f00bb6c6000 r--s 00029000 00:22 53502                      /home/nazk1/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/openblas-0.3.21-1.5.8.jar
+7f00bb6c6000-7f00bb6cf000 r--s 00071000 00:22 53498                      /home/nazk1/.m2/repository/org/bytedeco/javacpp/1.5.8/javacpp-1.5.8.jar
+7f00bb6cf000-7f00bb6d4000 r--s 00064000 00:22 53501                      /home/nazk1/.m2/repository/org/bytedeco/javacv/1.5.8/javacv-1.5.8.jar
+7f00bb6d4000-7f00bb6d6000 r--s 00006000 00:22 131599                     /home/nazk1/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar
+7f00bb6d6000-7f00bb6da000 r--s 00027000 00:22 131600                     /home/nazk1/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar
+7f00bb6da000-7f00bb6e6000 r--s 00097000 00:22 131595                     /home/nazk1/.m2/repository/io/micrometer/micrometer-core/1.9.17/micrometer-core-1.9.17.jar
+7f00bb6e6000-7f00bb6eb000 r--s 00057000 00:22 68525                      /home/nazk1/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.5/jackson-core-2.13.5.jar
+7f00bb6eb000-7f00bb702000 r--s 00161000 00:22 68522                      /home/nazk1/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.5/jackson-databind-2.13.5.jar
+7f00bb702000-7f00bb716000 r--s 00095000 00:22 131597                     /home/nazk1/.m2/repository/org/springframework/boot/spring-boot-actuator/2.7.18/spring-boot-actuator-2.7.18.jar
+7f00bb716000-7f00bb729000 r--s 0007a000 00:22 131598                     /home/nazk1/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/2.7.18/spring-boot-actuator-autoconfigure-2.7.18.jar
+7f00bb729000-7f00bb745000 r--s 00150000 00:22 68515                      /home/nazk1/.m2/repository/org/springframework/spring-core/5.3.31/spring-core-5.3.31.jar
+7f00bb745000-7f00bb773000 r--s 0016f000 00:22 68495                      /home/nazk1/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.7.18/spring-boot-autoconfigure-2.7.18.jar
+7f00bb773000-7f00bb792000 r--s 00148000 00:22 68494                      /home/nazk1/.m2/repository/org/springframework/boot/spring-boot/2.7.18/spring-boot-2.7.18.jar
+7f00bb792000-7f00bb7b5000 r-xp 00000000 00:22 219213                     /usr/lib64/libgcc_s-15-20250425.so.1
+7f00bb7b5000-7f00bb7bc000 r--p 00023000 00:22 219213                     /usr/lib64/libgcc_s-15-20250425.so.1
+7f00bb7bc000-7f00bb7bd000 r--p 0002a000 00:22 219213                     /usr/lib64/libgcc_s-15-20250425.so.1
+7f00bb7bd000-7f00bb7be000 rw-p 00000000 00:00 0 
+7f00bb7be000-7f00bb7d4000 r-xp 00000000 00:22 220044                     /usr/lib64/libnss_myhostname.so.2
+7f00bb7d4000-7f00bb7e3000 r--p 00016000 00:22 220044                     /usr/lib64/libnss_myhostname.so.2
+7f00bb7e3000-7f00bb7e8000 r--p 00024000 00:22 220044                     /usr/lib64/libnss_myhostname.so.2
+7f00bb7e8000-7f00bb7e9000 rw-p 00029000 00:22 220044                     /usr/lib64/libnss_myhostname.so.2
+7f00bb7e9000-7f00bb7ec000 r--s 0001b000 00:22 68530                      /home/nazk1/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.13.5/jackson-datatype-jsr310-2.13.5.jar
+7f00bb7ec000-7f00bb7ef000 r--s 00010000 00:22 68524                      /home/nazk1/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.5/jackson-annotations-2.13.5.jar
+7f00bb7ef000-7f00bb7f6000 r--s 0004a000 00:22 68516                      /home/nazk1/.m2/repository/org/yaml/snakeyaml/1.30/snakeyaml-1.30.jar
+7f00bb7f6000-7f00bb7f8000 r--s 00005000 00:22 68517                      /home/nazk1/.m2/repository/org/springframework/spring-jcl/5.3.31/spring-jcl-5.3.31.jar
+7f00bb7f8000-7f00bb7fa000 r--s 00005000 00:22 68510                      /home/nazk1/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar
+7f00bb7fa000-7f00bb7fc000 r--s 00000000 00:22 68509                      /home/nazk1/.m2/repository/org/slf4j/jul-to-slf4j/1.7.36/jul-to-slf4j-1.7.36.jar
+7f00bb7fc000-7f00bb800000 ---p 00000000 00:00 0 
+7f00bb800000-7f00bb8fc000 rw-p 00000000 00:00 0 
+7f00bb8fc000-7f00bb8fd000 ---p 00000000 00:00 0 
+7f00bb8fd000-7f00bb901000 ---p 00000000 00:00 0 
+7f00bb901000-7f00bb9fd000 rw-p 00000000 00:00 0 
+7f00bb9fd000-7f00bb9fe000 ---p 00000000 00:00 0 
+7f00bb9fe000-7f00bba02000 ---p 00000000 00:00 0 
+7f00bba02000-7f00bbafe000 rw-p 00000000 00:00 0 
+7f00bbafe000-7f00bbaff000 ---p 00000000 00:00 0 
+7f00bbaff000-7f00bbb03000 ---p 00000000 00:00 0 
+7f00bbb03000-7f00bbbff000 rw-p 00000000 00:00 0 
+7f00bbbff000-7f00bbc00000 ---p 00000000 00:00 0 
+7f00bbc00000-7f00bbc04000 ---p 00000000 00:00 0 
+7f00bbc04000-7f00bbd00000 rw-p 00000000 00:00 0 
+7f00bbd00000-7f00bbd04000 ---p 00000000 00:00 0 
+7f00bbd04000-7f00bbe00000 rw-p 00000000 00:00 0 
+7f00bbe00000-7f00bbe04000 ---p 00000000 00:00 0 
+7f00bbe04000-7f00bbf00000 rw-p 00000000 00:00 0 
+7f00bbf00000-7f00bbf04000 ---p 00000000 00:00 0 
+7f00bbf04000-7f00bc000000 rw-p 00000000 00:00 0 
+7f00bc000000-7f00bc021000 rw-p 00000000 00:00 0 
+7f00bc021000-7f00c0000000 ---p 00000000 00:00 0 
+7f00c0000000-7f00c0006000 r--s 00044000 00:22 68508                      /home/nazk1/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.jar
+7f00c0006000-7f00c000c000 r-xp 00000000 00:22 39850                      /usr/lib64/libcap.so.2.73
+7f00c000c000-7f00c0010000 r--p 00006000 00:22 39850                      /usr/lib64/libcap.so.2.73
+7f00c0010000-7f00c0011000 r--p 00009000 00:22 39850                      /usr/lib64/libcap.so.2.73
+7f00c0011000-7f00c0012000 rw-p 0000a000 00:22 39850                      /usr/lib64/libcap.so.2.73
+7f00c0012000-7f00c0043000 rw-p 00000000 00:00 0 
+7f00c0043000-7f00c005b000 r-xp 00000000 00:22 381146                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libnet.so
+7f00c005b000-7f00c005c000 r--p 00017000 00:22 381146                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libnet.so
+7f00c005c000-7f00c005d000 rw-p 00018000 00:22 381146                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libnet.so
+7f00c005d000-7f00c006e000 r-xp 00000000 00:22 381147                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libnio.so
+7f00c006e000-7f00c006f000 r--p 00010000 00:22 381147                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libnio.so
+7f00c006f000-7f00c0070000 rw-p 00011000 00:22 381147                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libnio.so
+7f00c0070000-7f00c0071000 ---p 00000000 00:00 0 
+7f00c0071000-7f00c0171000 rw-p 00000000 00:00 0 
+7f00c0171000-7f00c242b000 rw-p 00000000 00:00 0 
+7f00c242b000-7f00c2600000 r--s 03d1a000 00:22 381225                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/rt.jar
+7f00c2600000-7f00c2e00000 rw-p 00000000 00:00 0 
+7f00c2e00000-7f00c2e0a000 r--s 00064000 00:22 68503                      /home/nazk1/.m2/repository/ch/qos/logback/logback-core/1.2.12/logback-core-1.2.12.jar
+7f00c2e0a000-7f00c2e13000 r-xp 00000000 00:22 381144                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libmanagement.so
+7f00c2e13000-7f00c2e14000 r--p 00008000 00:22 381144                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libmanagement.so
+7f00c2e14000-7f00c2e15000 rw-p 00009000 00:22 381144                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libmanagement.so
+7f00c2e15000-7f00c3ea8000 rw-p 00000000 00:00 0 
+7f00c3ea8000-7f00c3ea9000 ---p 00000000 00:00 0 
+7f00c3ea9000-7f00c3fa9000 rw-p 00000000 00:00 0 
+7f00c3fa9000-7f00c3faa000 ---p 00000000 00:00 0 
+7f00c3faa000-7f00c40aa000 rw-p 00000000 00:00 0 
+7f00c40aa000-7f00c40ab000 ---p 00000000 00:00 0 
+7f00c40ab000-7f00c41ab000 rw-p 00000000 00:00 0 
+7f00c41ab000-7f00c41ac000 ---p 00000000 00:00 0 
+7f00c41ac000-7f00c42ac000 rw-p 00000000 00:00 0 
+7f00c42ac000-7f00c42ad000 ---p 00000000 00:00 0 
+7f00c42ad000-7f00c43ad000 rw-p 00000000 00:00 0 
+7f00c43ad000-7f00c43ae000 ---p 00000000 00:00 0 
+7f00c43ae000-7f00c44ae000 rw-p 00000000 00:00 0 
+7f00c44ae000-7f00c44af000 ---p 00000000 00:00 0 
+7f00c44af000-7f00c45af000 rw-p 00000000 00:00 0 
+7f00c45af000-7f00c466b000 rw-p 00000000 00:00 0 
+7f00c466b000-7f00c5000000 ---p 00000000 00:00 0 
+7f00c5000000-7f00c6000000 rwxp 00000000 00:00 0 
+7f00c6000000-7f00d4000000 ---p 00000000 00:00 0 
+7f00d4000000-7f00d52b1000 rw-p 00000000 00:00 0 
+7f00d52b1000-7f00d8000000 ---p 00000000 00:00 0 
+7f00d8000000-7f00d8001000 r--s 00000000 00:22 53495                      /home/nazk1/.m2/repository/org/bytedeco/javacv-platform/1.5.8/javacv-platform-1.5.8.jar
+7f00d8001000-7f00d8003000 r--s 00003000 00:22 68502                      /home/nazk1/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.17.2/log4j-to-slf4j-2.17.2.jar
+7f00d8003000-7f00d8009000 r--s 00033000 00:22 68498                      /home/nazk1/.m2/repository/ch/qos/logback/logback-classic/1.2.12/logback-classic-1.2.12.jar
+7f00d8009000-7f00d80a4000 rw-p 00000000 00:00 0 
+7f00d80a4000-7f00d80a5000 ---p 00000000 00:00 0 
+7f00d80a5000-7f00d81a5000 rw-p 00000000 00:00 0 
+7f00d81a5000-7f00d81a6000 ---p 00000000 00:00 0 
+7f00d81a6000-7f00d82a6000 rw-p 00000000 00:00 0 
+7f00d82a6000-7f00d82a7000 ---p 00000000 00:00 0 
+7f00d82a7000-7f00d83a7000 rw-p 00000000 00:00 0 
+7f00d83a7000-7f00d8463000 rw-p 00000000 00:00 0 
+7f00d8463000-7f00d8df7000 ---p 00000000 00:00 0 
+7f00d8df7000-7f00d8e7f000 rw-p 00000000 00:00 0 
+7f00d8e7f000-7f00d9320000 ---p 00000000 00:00 0 
+7f00d9320000-7f00d9361000 rw-p 00000000 00:00 0 
+7f00d9361000-7f00d96e1000 ---p 00000000 00:00 0 
+7f00d96e1000-7f00d96fd000 r-xp 00000000 00:22 381155                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libzip.so
+7f00d96fd000-7f00d96fe000 r--p 0001b000 00:22 381155                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libzip.so
+7f00d96fe000-7f00d96ff000 rw-p 0001c000 00:22 381155                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libzip.so
+7f00d96ff000-7f00d9700000 ---p 00000000 00:00 0 
+7f00d9700000-7f00d9704000 ---p 00000000 00:00 0 
+7f00d9704000-7f00d9800000 rw-p 00000000 00:00 0 
+7f00d9800000-7f00da577000 r-xp 00000000 00:22 381159                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/server/libjvm.so
+7f00da577000-7f00da578000 ---p 00d77000 00:22 381159                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/server/libjvm.so
+7f00da578000-7f00da60f000 r--p 00d77000 00:22 381159                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/server/libjvm.so
+7f00da60f000-7f00da638000 rw-p 00e0e000 00:22 381159                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/server/libjvm.so
+7f00da638000-7f00da66c000 rw-p 00000000 00:00 0 
+7f00da66c000-7f00da66e000 r--s 00009000 00:22 68504                      /home/nazk1/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar
+7f00da66e000-7f00da66f000 r--s 00001000 00:22 68496                      /home/nazk1/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.7.18/spring-boot-starter-logging-2.7.18.jar
+7f00da66f000-7f00da670000 r--s 00001000 00:22 68490                      /home/nazk1/.m2/repository/org/springframework/boot/spring-boot-starter/2.7.18/spring-boot-starter-2.7.18.jar
+7f00da670000-7f00da671000 r--s 00001000 00:22 131593                     /home/nazk1/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/2.7.18/spring-boot-starter-actuator-2.7.18.jar
+7f00da671000-7f00da672000 r--s 00003000 00:22 381162                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/cat.jar
+7f00da672000-7f00da673000 r--s 00000000 00:29 3401                       /tmp/cp_4ltmgzjcd8qgnpif1bi1nj6jp.jar
+7f00da673000-7f00da674000 rw-p 00000000 00:00 0 
+7f00da674000-7f00da67a000 r--s 000d4000 00:22 381208                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/jfr.jar
+7f00da67a000-7f00da682000 rw-s 00000000 00:29 3402                       /tmp/hsperfdata_nazk1/65507
+7f00da682000-7f00da6ab000 r-xp 00000000 00:22 381134                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libjava.so
+7f00da6ab000-7f00da6ac000 ---p 00029000 00:22 381134                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libjava.so
+7f00da6ac000-7f00da6ad000 r--p 00029000 00:22 381134                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libjava.so
+7f00da6ad000-7f00da6af000 rw-p 0002a000 00:22 381134                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libjava.so
+7f00da6af000-7f00da6b0000 r-xp 00000000 00:22 219322                     /usr/lib64/librt.so.1
+7f00da6b0000-7f00da6b1000 r--p 00001000 00:22 219322                     /usr/lib64/librt.so.1
+7f00da6b1000-7f00da6b2000 r--p 00001000 00:22 219322                     /usr/lib64/librt.so.1
+7f00da6b2000-7f00da6b3000 rw-p 00000000 00:00 0 
+7f00da6b3000-7f00da72f000 r-xp 00000000 00:22 219314                     /usr/lib64/libm.so.6
+7f00da72f000-7f00da79f000 r--p 0007c000 00:22 219314                     /usr/lib64/libm.so.6
+7f00da79f000-7f00da7a0000 r--p 000eb000 00:22 219314                     /usr/lib64/libm.so.6
+7f00da7a0000-7f00da7a1000 rw-p 000ec000 00:22 219314                     /usr/lib64/libm.so.6
+7f00da7a1000-7f00da7a3000 rw-p 00000000 00:00 0 
+7f00da7a3000-7f00da912000 r-xp 00000000 00:22 219312                     /usr/lib64/libc.so.6
+7f00da912000-7f00da987000 r--p 0016f000 00:22 219312                     /usr/lib64/libc.so.6
+7f00da987000-7f00da98b000 r--p 001e3000 00:22 219312                     /usr/lib64/libc.so.6
+7f00da98b000-7f00da98d000 rw-p 001e7000 00:22 219312                     /usr/lib64/libc.so.6
+7f00da98d000-7f00da995000 rw-p 00000000 00:00 0 
+7f00da995000-7f00da996000 r-xp 00000000 00:22 219313                     /usr/lib64/libdl.so.2
+7f00da996000-7f00da997000 r--p 00001000 00:22 219313                     /usr/lib64/libdl.so.2
+7f00da997000-7f00da998000 r--p 00001000 00:22 219313                     /usr/lib64/libdl.so.2
+7f00da998000-7f00da999000 rw-p 00000000 00:00 0 
+7f00da999000-7f00da9b1000 r-xp 00000000 00:22 381118                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/jli/libjli.so
+7f00da9b1000-7f00da9b2000 r--p 00017000 00:22 381118                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/jli/libjli.so
+7f00da9b2000-7f00da9b3000 rw-p 00018000 00:22 381118                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/jli/libjli.so
+7f00da9b3000-7f00da9b4000 r-xp 00000000 00:22 219320                     /usr/lib64/libpthread.so.0
+7f00da9b4000-7f00da9b5000 r--p 00001000 00:22 219320                     /usr/lib64/libpthread.so.0
+7f00da9b5000-7f00da9b6000 r--p 00001000 00:22 219320                     /usr/lib64/libpthread.so.0
+7f00da9b6000-7f00da9b7000 rw-p 00000000 00:00 0 
+7f00da9b7000-7f00da9b8000 rw-p 00000000 00:00 0 
+7f00da9b8000-7f00da9b9000 rw-p 00000000 00:00 0 
+7f00da9b9000-7f00da9ba000 r--p 00000000 00:00 0 
+7f00da9ba000-7f00da9c7000 r-xp 00000000 00:22 381154                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libverify.so
+7f00da9c7000-7f00da9c9000 r--p 0000c000 00:22 381154                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libverify.so
+7f00da9c9000-7f00da9ca000 rw-p 0000e000 00:22 381154                     /usr/lib/jvm/java-8-zulu-openjdk-jdk/jre/lib/amd64/libverify.so
+7f00da9ca000-7f00da9cc000 rw-p 00000000 00:00 0 
+7f00da9cc000-7f00da9ce000 r--p 00000000 00:00 0                          [vvar]
+7f00da9ce000-7f00da9d0000 r--p 00000000 00:00 0                          [vvar_vclock]
+7f00da9d0000-7f00da9d2000 r-xp 00000000 00:00 0                          [vdso]
+7f00da9d2000-7f00da9fb000 r-xp 00000000 00:22 219309                     /usr/lib64/ld-linux-x86-64.so.2
+7f00da9fb000-7f00daa06000 r--p 00029000 00:22 219309                     /usr/lib64/ld-linux-x86-64.so.2
+7f00daa06000-7f00daa08000 r--p 00034000 00:22 219309                     /usr/lib64/ld-linux-x86-64.so.2
+7f00daa08000-7f00daa09000 rw-p 00036000 00:22 219309                     /usr/lib64/ld-linux-x86-64.so.2
+7f00daa09000-7f00daa0a000 rw-p 00000000 00:00 0 
+7ffd42226000-7ffd42248000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=43791 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=backend -Dmanagement.endpoints.jmx.exposure.include=* 
+java_command: com.naz1k1.Application
+java_class_path (initial): /tmp/cp_4ltmgzjcd8qgnpif1bi1nj6jp.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/home/nazk1/.nvm/versions/node/v18.20.8/bin:/home/nazk1/.local/bin:/home/nazk1/bin:/usr/local/bin:/usr/bin:/var/lib/snapd/snap/bin
+USERNAME=nazk1
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xb4f220], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xb4f220], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x972940], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x972940], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x972940], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x972940], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x972ef0], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x972e30], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x972e30], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x972e30], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x972e30], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Fedora release 42 (Adams)
+
+uname:Linux 6.14.6-300.fc42.x86_64 #1 SMP PREEMPT_DYNAMIC Fri May  9 20:11:19 UTC 2025 x86_64
+libc:glibc 2.41 NPTL 2.41 
+rlimit: STACK 8192k, CORE infinity, NPROC 125998, NOFILE 524288, AS infinity
+load average:1.56 1.31 1.17
+
+/proc/meminfo:
+MemTotal:       32442540 kB
+MemFree:        14221432 kB
+MemAvailable:   21675204 kB
+Buffers:           14236 kB
+Cached:          7988600 kB
+SwapCached:            0 kB
+Active:         12723252 kB
+Inactive:        4548212 kB
+Active(anon):    9520032 kB
+Inactive(anon):        0 kB
+Active(file):    3203220 kB
+Inactive(file):  4548212 kB
+Unevictable:        6268 kB
+Mlocked:            6268 kB
+SwapTotal:       8388604 kB
+SwapFree:        8388604 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             16392 kB
+Writeback:             0 kB
+AnonPages:       9275496 kB
+Mapped:          1729756 kB
+Shmem:            246308 kB
+KReclaimable:     136508 kB
+Slab:             412908 kB
+SReclaimable:     136508 kB
+SUnreclaim:       276400 kB
+KernelStack:       36936 kB
+PageTables:       103400 kB
+SecPageTables:      7296 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    24609872 kB
+Committed_AS:   45225540 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      178320 kB
+VmallocChunk:          0 kB
+Percpu:            16368 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+Unaccepted:            0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      295288 kB
+DirectMap2M:     6629376 kB
+DirectMap1G:    27262976 kB
+
+
+CPU:total 12 (initial active 12) (12 cores per cpu, 1 threads per core) family 25 model 97 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv, bmi1
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 97
+model name	: AMD Ryzen 5 7500F 6-Core Processor
+stepping	: 2
+microcode	: 0xa601209
+cpu MHz		: 5047.604
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 12
+core id		: 0
+cpu cores	: 6
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips	: 7400.09
+TLB size	: 3584 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 1
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 97
+model name	: AMD Ryzen 5 7500F 6-Core Processor
+stepping	: 2
+microcode	: 0xa601209
+cpu MHz		: 5048.742
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 12
+core id		: 1
+cpu cores	: 6
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips	: 7400.09
+TLB size	: 3584 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 2
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 97
+model name	: AMD Ryzen 5 7500F 6-Core Processor
+stepping	: 2
+microcode	: 0xa601209
+cpu MHz		: 5042.079
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 12
+core id		: 2
+cpu cores	: 6
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips	: 7400.09
+TLB size	: 3584 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 3
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 97
+model name	: AMD Ryzen 5 7500F 6-Core Processor
+stepping	: 2
+microcode	: 0xa601209
+cpu MHz		: 5048.717
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 12
+core id		: 3
+cpu cores	: 6
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips	: 7400.09
+TLB size	: 3584 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 4
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 97
+model name	: AMD Ryzen 5 7500F 6-Core Processor
+stepping	: 2
+microcode	: 0xa601209
+cpu MHz		: 4038.705
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 12
+core id		: 4
+cpu cores	: 6
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips	: 7400.09
+TLB size	: 3584 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 5
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 97
+model name	: AMD Ryzen 5 7500F 6-Core Processor
+stepping	: 2
+microcode	: 0xa601209
+cpu MHz		: 4028.766
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 12
+core id		: 5
+cpu cores	: 6
+apicid		: 10
+initial apicid	: 10
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips	: 7400.09
+TLB size	: 3584 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 6
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 97
+model name	: AMD Ryzen 5 7500F 6-Core Processor
+stepping	: 2
+microcode	: 0xa601209
+cpu MHz		: 5048.567
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 12
+core id		: 0
+cpu cores	: 6
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips	: 7400.09
+TLB size	: 3584 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 7
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 97
+model name	: AMD Ryzen 5 7500F 6-Core Processor
+stepping	: 2
+microcode	: 0xa601209
+cpu MHz		: 4994.942
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 12
+core id		: 1
+cpu cores	: 6
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips	: 7400.09
+TLB size	: 3584 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 8
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 97
+model name	: AMD Ryzen 5 7500F 6-Core Processor
+stepping	: 2
+microcode	: 0xa601209
+cpu MHz		: 5048.518
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 12
+core id		: 2
+cpu cores	: 6
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips	: 7400.09
+TLB size	: 3584 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 9
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 97
+model name	: AMD Ryzen 5 7500F 6-Core Processor
+stepping	: 2
+microcode	: 0xa601209
+cpu MHz		: 5039.286
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 12
+core id		: 3
+cpu cores	: 6
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips	: 7400.09
+TLB size	: 3584 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 10
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 97
+model name	: AMD Ryzen 5 7500F 6-Core Processor
+stepping	: 2
+microcode	: 0xa601209
+cpu MHz		: 4026.445
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 12
+core id		: 4
+cpu cores	: 6
+apicid		: 9
+initial apicid	: 9
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips	: 7400.09
+TLB size	: 3584 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 11
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 97
+model name	: AMD Ryzen 5 7500F 6-Core Processor
+stepping	: 2
+microcode	: 0xa601209
+cpu MHz		: 4031.975
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 12
+core id		: 5
+cpu cores	: 6
+apicid		: 11
+initial apicid	: 11
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips	: 7400.09
+TLB size	: 3584 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+
+
+Memory: 4k page, physical 32442540k(14221432k free), swap 8388604k(8388604k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.452-b09) for linux-amd64 JRE (Zulu 8.86.0.25-CA-linux64) (1.8.0_452-b09), built on Apr 11 2025 08:35:23 by "zulu_re" with gcc 7.3.0
+
+time: Fri May 23 17:36:47 2025
+timezone: CST
+elapsed time: 17.736499 seconds (0d 0h 0m 17s)
+
